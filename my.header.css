@@ -1,3 +1,7 @@
+.my-header-wrap{
+    min-width:1060px;
+    width:100%;
+}
 .my-header-top-deco {
     height: 4px;
     background-color: rebeccapurple;
