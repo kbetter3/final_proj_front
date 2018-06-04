@@ -123,6 +123,7 @@
             }
 
             .my-login-bottom {
+                position: relative;
                 height: 40px;
             }
 
@@ -136,7 +137,28 @@
             .my-login-bottom > a {
                 display: inline-block;
                 vertical-align: middle;
-                float: right;
+            }
+
+            input[type=checkbox] {
+                margin-top: 0;
+            }
+
+            .my-member-find {
+                position: absolute;
+                right: 0;
+                vertical-align: middle;
+            }
+
+            .my-member-find > span {
+                display: table-cell;
+                white-space: nowrap;
+                text-align: right;
+                margin: 0 5px;
+                vertical-align: middle;;
+            }
+
+            .my-member-find > * {
+                display: inline-block;
             }
         </style>
 
@@ -189,7 +211,11 @@
                         <input type="checkbox" id="id-remember">
                         <label for="id-remember">아이디 저장</label>
 
-                        <a href="#">아이디/비밀번호 찾기</a>
+                        <span class="my-member-find">
+                            <a href="#">회원가입</a>
+                            <span class="my-seperator">|</span>
+                            <a href="#">아이디/비밀번호 찾기</a>
+                        </span>
                     </div>
                 </div>
             </div>
