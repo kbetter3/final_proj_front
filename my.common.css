@@ -5,7 +5,13 @@
     box-sizing: border-box;
 }
 
-.container {
+.align-helper {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.my-container {
     width: 1060px;
     margin: 0 auto;
 }

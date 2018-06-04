@@ -8,3 +8,20 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
+
+.my-header-nav-wrap {
+    position: relative;
+}
+
+.my-header-nav-item-wrap {
+    display: inline-block;
+    position: absolute;
+}
+
+.my-header-nav-item-left {
+    left: 0;
+}
+
+.my-header-nav-item-right {
+    right: 0;
+}
