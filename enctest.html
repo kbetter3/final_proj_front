@@ -16,15 +16,20 @@
         <script src="https://code.jquery.com/jquery-latest.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+        <script src="/res/js/encrypt.js"></script>
 
         <script>
             $(document).ready(function(){
-
+                $("input").on("keyup", function(){
+                    console.log($(this).val());
+                    $("div").text(SHA256($(this).val()));
+                });
             });
         </script>
     </head>
 
     <body>
-        <div style="background-color: red; height: 300px;"></div>
+        <input type="text">
+        <div></div>
     </body>
 </html>
