@@ -6,6 +6,10 @@
     background-color: white;
 }
 
+.my-member-container:nth-child(2n-1) {
+    margin-top: -1px;
+}
+
 .my-member-row {
     position: relative;
     width: 100%;
@@ -40,4 +44,26 @@
 
 .my-member-row-right {
     right: 0;
+}
+
+input.my-member-green-border {
+    border: 1px solid rgba(0, 180, 35, 1);
+}
+
+input.my-member-red-border {
+    border: 1px solid red;
+}
+
+.my-member-title {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.my-member-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.my-member-logo a:link, .my-member-logo a:visited, .my-member-logo:hover {
+    text-decoration: none;
 }
