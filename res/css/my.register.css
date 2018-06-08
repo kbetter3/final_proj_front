@@ -79,12 +79,19 @@ button.my-register-regbtn {
     text-align: center;
 }
 
-button.my-register-iddupchck {
+button.my-register-iddupchck, button.my-register-emaildupchck {
+    padding: 0 10px 0 10px;
+
     display: inline-block;
     border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
     background-color: inherit;
     height: 58px;
     position: absolute;
     top: 1px;
-    right: 20px;
+    right: 0;
+}
+
+#my-register-id, #my-register-email {
+    padding: 0 90px 0 20px;
 }

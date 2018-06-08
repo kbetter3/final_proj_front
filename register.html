@@ -80,6 +80,7 @@
                         <div class="my-member-row-right">
                             <div class="align-helper h60"></div>
                             <input class="my-member-input" type="text" id="my-register-email" name="email" placeholder="이메일">
+                            <button type="button" class="my-register-emaildupchck">중복검사</button>
                         </div>
                     </div>
                 </form>
@@ -135,8 +136,8 @@
         <script src="/res/js/my.register.js"></script>
         <script>
             $(document).ready(function(){
-                $("#my-register-id").on("keyup", register_idValidationCheck);
-                $("#my-register-id").on("blur", register_idDuplicationCheck);
+                $(".my-register-iddupchck").on("click", register_idCheck);
+                $(".my-register-iddupchck").on("keydown", register_resetIdValidation);
             });
         </script>
     </body>
