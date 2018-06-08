@@ -7,16 +7,10 @@ var register_idDupCheck = false;
 function register_idCheck() {
     register_idValidationCheck();
 
-    if (register_idValidCheck) {
-        register_idDuplicationCheck();
-        console.log("iddupchck");
-    } else {
+    if (!register_idValidCheck)
         return;
-    }
 
-    if (register_idValidCheck && register_idDupCheck) {
-
-    }
+    register_idDuplicationCheck();
 }
 
 function register_idValidationCheck() {
@@ -25,8 +19,6 @@ function register_idValidationCheck() {
     var id = id_input.val();
 
     if (regex.test(id) && id.length >= 4 && id.length <= 20) {
-//        id_input.removeClass("my-member-red-border").addClass("my-member-green-border");
-
         $("#my-register-id-info").hide();
 
         console.log("ok");
@@ -38,7 +30,7 @@ function register_idValidationCheck() {
             $("#my-register-id-info").text("").append("아이디는 영문+숫자조합 4~20자만 가능합니다.").show();
         }
 
-        id_input.removeClass("my-member-green-border").addClass("my-member-red-border");
+        id_input.removeClass("my-member-gray-border my-member-green-border").addClass("my-member-red-border");
 
         console.log("no");
         register_idValidCheck = false;
@@ -47,25 +39,31 @@ function register_idValidationCheck() {
 
 function register_idDuplicationCheck() {
     if (register_idValidCheck) {
-        var cc = $.ajax({
+        $.ajax({
             url: 'iddupcheck',
             data: {id : $("#my-register-id").val()},
-            success: register_idDuplicationCheck
+            success: register_idDuplicationCheckSuccess
         });
-
-        console.log(cc);
     }
 }
 
 function register_idDuplicationCheckSuccess(data) {
-    if (data) {
-        console.log(data);
+    var id_input = $("#my-register-id");
+
+    if (data.length == 0) {
+        register_idDupCheck = true;
+        id_input.removeClass("my-member-gray-border my-member-red-border").addClass("my-member-green-border");
+        $("#my-register-id-info").text("").hide();
     } else {
-        console.log("data is null");
+        register_idDupCheck = false;
+        id_input.removeClass("my-member-gray-border my-member-green-border").addClass("my-member-red-border");
+        $("#my-register-id-info").text("").append("이미 사용중인 아이디입니다.").show();
     }
 }
 
 function register_resetIdValidation() {
     register_idValidCheck = false;
     register_idDupCheck = false;
+    $("#my-register-id-info").text("").hide();
+    $("#my-register-id").removeClass("my-member-red-border my-member-green-border").addClass("my-member-gray-border");
 }
