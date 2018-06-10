@@ -63,20 +63,12 @@ button.my-register-regbtn {
     color: white;
 }
 
-#my-register-email-info {
+#my-register-email-label {
     width: 99%;
     display: inline-block;
     text-align: center;
     vertical-align: center;
     font-size: 1.2em;
-}
-
-
-.my-register-info-row {
-    display: none;
-    height: 30px;
-    color: red;
-    text-align: center;
 }
 
 button.my-register-iddupchck, button.my-register-emaildupchck {
@@ -94,4 +86,11 @@ button.my-register-iddupchck, button.my-register-emaildupchck {
 
 #my-register-id, #my-register-email {
     padding: 0 90px 0 20px;
+}
+
+.my-register-info-row {
+    display: none;
+    height: 30px;
+    color: red;
+    text-align: center;
 }
