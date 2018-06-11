@@ -28,17 +28,39 @@
     </head>
 
     <body>
-            <div style="width: 100%; min-width: 1060px; position: absolute; bottom: 0;">
-                <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-                <div id="jp_container_1" class="jp-audio" role="application">
-                    <button class="jp-play" role="button" tabindex="0">play</button>
-                    <button class="jp-stop" role="button" tabindex="0">stop</button>
-                </div>
-            </div>
-
         <div class="my-player-wrap">
-            <div class="my-player-container">
-                asdfasdfasdf
+            <div class="my-player-outer-container">
+                <div class="my-player-container">
+                    <div class="my-player-controls">
+                        <ul>
+                            <li class="icon-keys back"><button>back</button></li>
+                            <!-- play(default) / pause -->
+                            <li class="icon-keys play"><button>play</button></li>
+                            <li class="icon-keys front"><button>front</button></li>
+                            <!-- shuffle(default) / no-shuffle -->
+                            <li class="icon-keys shuffle"><button>shuffle</button></li>
+                            <!-- repeat(default) / one-repeat / no-repeat -->
+                            <li class="icon-keys repeat"><button>repeat</button></li>
+                        </ul>
+                    </div>
+                    <div class="my-player-timeline">
+                        <div class="timeline-timer timeline-nowplaying"><p>0:01</p></div>
+                        <div class="timeline-progress-outline">
+                            <div class="timeline-progress-bar"></div>
+                        </div>
+                        <div class="timeline-timer timeline-nowplaying timer"><p>4:48</p></div>
+                        <div class="timeline-volume-control">
+                            <!-- volume -->
+                            <div class="icon-keys volume">
+                                <button>volume</button>
+                            </div>
+                            <div class="layer-volume">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-player-nowplaying"></div>
+                    <div class="my-player-others"></div>
+                </div>
             </div>
         </div>
 
