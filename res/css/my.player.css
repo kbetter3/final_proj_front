@@ -1,0 +1,11 @@
+.my-player-wrap {
+    width: 100%;
+    min-width: 1060px;
+    position: fixed;
+    bottom: 0;
+}
+
+.my-player-container {
+    margin: 0 auto;
+    width: 1060px;
+}

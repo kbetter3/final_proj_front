@@ -221,6 +221,7 @@ function register_doRegister() {
     }
 
     if (submit) {
+        register_encpw();
         $("#register-form").submit();
     }
 }
@@ -235,4 +236,11 @@ function register_clipTerm() {
         $(this).removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
         term_content.hide();
     }
+}
+
+function register_encpw() {
+    var pw = $("#my-register-pw").val();
+    var encpw = SHA256(pw);
+    pw.val(encpw);
+    $("#my-register-pwchck").val("");
 }
