@@ -1,0 +1,24 @@
+li.my-menu-menuitem {
+    padding: 0 30px;
+    display: inline-block;
+    font-size: 1.4em;
+}
+
+.my-menu-wrap {
+    padding-top: 30px;
+    width: 100%;
+    position: relative;
+}
+
+.my-menu-wrap > ul {
+    list-style: none;
+    position: absolute;
+}
+
+.my-menu-left {
+    left: 0;
+}
+
+.my-menu-right {
+    right: 0;
+}
