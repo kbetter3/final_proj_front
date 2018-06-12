@@ -33,33 +33,66 @@
                 <div class="my-player-container">
                     <div class="my-player-controls">
                         <ul>
-                            <li class="icon-keys back"><button>back</button></li>
-                            <!-- play(default) / pause -->
-                            <li class="icon-keys play"><button>play</button></li>
-                            <li class="icon-keys front"><button>front</button></li>
-                            <!-- shuffle(default) / no-shuffle -->
-                            <li class="icon-keys shuffle"><button>shuffle</button></li>
-                            <!-- repeat(default) / one-repeat / no-repeat -->
-                            <li class="icon-keys repeat"><button>repeat</button></li>
+                            <li class="icon-keys back">
+                                <button class="glyphicon glyphicon-step-backward"></button>
+                            </li>
+                            <li class="icon-keys play">
+                                <!--  glyphicon-play / glyphicon-pause -->
+                                <button class="glyphicon glyphicon-play"></button>
+                            </li>
+                            <li class="icon-keys front">
+                                <button class="glyphicon glyphicon-step-forward"></button>
+                            </li>
+                            <li class="icon-keys shuffle">
+                                <!-- ''(default) / glyphicon-random shuffle -->
+                                <button class="glyphicon glyphicon-random"></button>
+                            </li>
+                            <li class="icon-keys repeat">
+                                <!-- glyphicon-repeat(default) / glyphicon-repeat on / glyphicon-refresh on -->
+                                <button class="glyphicon glyphicon-repeat"></button>
+                            </li>
                         </ul>
                     </div>
                     <div class="my-player-timeline">
-                        <div class="timeline-timer timeline-nowplaying"><p>0:01</p></div>
-                        <div class="timeline-progress-outline">
-                            <div class="timeline-progress-bar"></div>
-                        </div>
-                        <div class="timeline-timer timeline-nowplaying timer"><p>4:48</p></div>
-                        <div class="timeline-volume-control">
-                            <!-- volume -->
-                            <div class="icon-keys volume">
-                                <button>volume</button>
+                        <div class="my-player-timeline-inner">
+                            <div class="timeline-timer timeline-nowplaying timer"><p>0:01</p></div>
+                            <div class="progress-wrap">
+                                <div class="progress-outline timeline-progress-outline">
+                                    <!-- style="width:30%" -->
+                                    <div class="progress-bar timeline-progress-bar"></div>
+                                </div>
                             </div>
-                            <div class="layer-volume">
+                            <div class="timeline-timer timeline-nowplaying"><p>4:48</p></div>
+                            <div class="timeline-volume-control">
+                                <div class="icon-keys volume">
+                                    <!-- glyphicon-volume-up(default), glyphicon-volume-down, glyphicon-volume-off -->
+                                    <button class="glyphicon glyphicon-volume-up"></button>
+                                </div>
+                                <div class="progress-wrap">
+                                    <div class="progress-outline volume-outline">
+                                        <!-- style="width:30%" -->
+                                        <div class="progress-bar volume-bar"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="my-player-nowplaying"></div>
-                    <div class="my-player-others"></div>
+                    <div class="my-player-nowplaying">
+                        <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                        <div class="song-info">
+                            <p class="song-info-title">Trippie Redd</p>
+                            <p class="song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                        </div>
+                    </div>
+                    <div class="my-player-others">
+                        <ul>
+                            <li class="icon-keys playlist">
+                                <button class="glyphicon glyphicon glyphicon-list"></button>
+                                <div class="layer-playlist">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
