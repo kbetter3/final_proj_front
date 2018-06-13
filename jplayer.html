@@ -33,45 +33,45 @@
                 <div class="my-player-container">
                     <div class="my-player-controls">
                         <ul>
-                            <li class="icon-keys back">
+                            <li class="my-player-icon-keys my-player-back">
                                 <button class="glyphicon glyphicon-step-backward"></button>
                             </li>
-                            <li class="icon-keys play">
+                            <li class="my-player-icon-keys my-player-play">
                                 <!--  glyphicon-play / glyphicon-pause -->
                                 <button class="glyphicon glyphicon-play"></button>
                             </li>
-                            <li class="icon-keys front">
+                            <li class="my-player-icon-keys my-player-front">
                                 <button class="glyphicon glyphicon-step-forward"></button>
                             </li>
-                            <li class="icon-keys shuffle">
-                                <!-- ''(default) / glyphicon-random shuffle -->
+                            <li class="my-player-icon-keys my-player-shuffle">
+                                <!-- ''(default) / glyphicon-random my-player-shuffle -->
                                 <button class="glyphicon glyphicon-random"></button>
                             </li>
-                            <li class="icon-keys repeat">
-                                <!-- glyphicon-repeat(default) / glyphicon-repeat on / glyphicon-refresh on -->
+                            <li class="my-player-icon-keys my-player-repeat">
+                                <!-- glyphicon-repeat(default) / glyphicon-repeat my-player-on / glyphicon-refresh my-player-on -->
                                 <button class="glyphicon glyphicon-repeat"></button>
                             </li>
                         </ul>
                     </div>
                     <div class="my-player-timeline">
                         <div class="my-player-timeline-inner">
-                            <div class="timeline-timer timeline-nowplaying timer"><p>0:01</p></div>
-                            <div class="progress-wrap">
-                                <div class="progress-outline timeline-progress-outline">
+                            <div class="my-player-timeline-timer my-player-timeline-nowplaying my-player-timer"><p>0:01</p></div>
+                            <div class="my-player-progress-wrap">
+                                <div class="my-player-progress-outline my-player-timeline-progress-outline">
                                     <!-- style="width:30%" -->
-                                    <div class="progress-bar timeline-progress-bar"></div>
+                                    <div class="my-player-progress-bar my-player-timeline-progress-bar"></div>
                                 </div>
                             </div>
-                            <div class="timeline-timer timeline-nowplaying"><p>4:48</p></div>
-                            <div class="timeline-volume-control">
-                                <div class="icon-keys volume">
+                            <div class="my-player-timeline-timer my-player-timeline-nowplaying"><p>4:48</p></div>
+                            <div class="my-player-timeline-volume-control">
+                                <div class="my-player-icon-keys my-player-volume">
                                     <!-- glyphicon-volume-up(default), glyphicon-volume-down, glyphicon-volume-off -->
                                     <button class="glyphicon glyphicon-volume-up"></button>
                                 </div>
-                                <div class="progress-wrap">
-                                    <div class="progress-outline volume-outline">
+                                <div class="my-player-progress-wrap">
+                                    <div class="my-player-progress-outline my-player-volume-outline">
                                         <!-- style="width:30%" -->
-                                        <div class="progress-bar volume-bar"></div>
+                                        <div class="my-player-progress-bar my-player-volume-bar"></div>
                                     </div>
                                 </div>
                             </div>
@@ -79,16 +79,124 @@
                     </div>
                     <div class="my-player-nowplaying">
                         <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
-                        <div class="song-info">
-                            <p class="song-info-title">Trippie Redd</p>
-                            <p class="song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                        <div class="my-player-song-info">
+                            <p class="my-player-song-info-title">Trippie Redd</p>
+                            <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
                         </div>
                     </div>
                     <div class="my-player-others">
                         <ul>
-                            <li class="icon-keys playlist">
+                            <li class="my-player-icon-keys my-player-playlist">
                                 <button class="glyphicon glyphicon glyphicon-list"></button>
-                                <div class="layer-playlist">
+                                <div class="my-player-layer-playlist">
+                                    <div class="my-player-playlist-list-wrap">
+                                        <div class="my-player-playlist-title">
+                                            <button>
+                                                <p>Playlist</p>
+                                                <!-- glyphicon-chevron-down / glyphicon-chevron-up -->
+                                                <span class="glyphicon glyphicon-chevron-down"></span>
+                                            </button>
+                                        </div>
+                                        <div class="my-player-playlist-list">
+                                            <ul>
+                                                <li><button class="my-player-on"><p>playlist1</p></button></li>
+                                                <li><button><p>playlist2</p></button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="my-player-layer-playlist-songs">
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="https://i1.sndcdn.com/artworks-7DzkwxzFYDeO-0-t50x50.jpg">
+                                            <div class="my-player-song-info">
+                                                <p class="my-player-song-info-title">Trippie Redd</p>
+                                                <p class="my-player-song-info-artist">I Kill People! ft Tadoe &amp; Chief Keef [Produced by: Ozmusiqe] RR </p>
+                                            </div>
+                                            <div class="my-player-song-time">
+                                                <p>10:55</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button class="my-player-layer-close glyphicon glyphicon-remove"></button>
                                 </div>
                             </li>
                         </ul>

@@ -1,5 +1,5 @@
-ul,li,button,p,div{list-style: none;margin:0;padding:0}
-button.glyphicon{opacity:1;transform:scale(1);top:0;font-size:14px;color:#2e2e2e}
+.my-player-wrap ul,.my-player-wrap li,.my-player-wrap button,.my-player-wrap p,.my-player-wrap div{list-style: none;margin:0;padding:0;background:none;border:none}
+.my-player-wrap button.glyphicon,.my-player-wrap span.glyphicon{opacity:1;transform:scale(1);top:0;font-size:14px;color:#2e2e2e}
 .my-player-wrap {
     color:#666;
     width: 100%;
@@ -22,7 +22,7 @@ button.glyphicon{opacity:1;transform:scale(1);top:0;font-size:14px;color:#2e2e2e
     height:48px;
 }
 
-.icon-keys{
+.my-player-icon-keys{
     display:inline-block;
     vertical-align:middle;
     text-align:center;
@@ -30,13 +30,13 @@ button.glyphicon{opacity:1;transform:scale(1);top:0;font-size:14px;color:#2e2e2e
     height:100%;
     margin:0 0 0 12px;
 }
-.icon-keys button{
+.my-player-icon-keys button{
     height:100%;
 }
-.icon-keys.shuffle button.shuffle{
+.my-player-icon-keys.my-player-shuffle button.my-player-shuffle{
     color:mediumpurple;
 }
-.icon-keys.repeat button.on{
+.my-player-icon-keys.my-player-repeat button.my-player-on{
     color:mediumpurple;
 }
 
@@ -62,51 +62,51 @@ button.glyphicon{opacity:1;transform:scale(1);top:0;font-size:14px;color:#2e2e2e
     height:48px;
     vertical-align:middle;
 }
-.my-player-timeline-inner .timeline-nowplaying{
+.my-player-timeline-inner .my-player-timeline-nowplaying{
     width:50px;
     font:11px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
-.my-player-timeline-inner .timeline-nowplaying.timer{
+.my-player-timeline-inner .my-player-timeline-nowplaying.my-player-timer{
     text-align:right;
-    color: rebeccapurple;
+    color: mediumpurple;
 }
-.my-player-timeline-inner .timeline-nowplaying p{
+.my-player-timeline-inner .my-player-timeline-nowplaying p{
     display:table-cell;
     vertical-align:middle;
     width:50px;
     height:48px;
 }
-.my-player-timeline-inner .progress-wrap{
+.my-player-timeline-inner .my-player-progress-wrap{
     width:325px;
 }
-.my-player-timeline-inner .timeline-volume-control{
+.my-player-timeline-inner .my-player-timeline-volume-control{
     width:104px;
     font-size:0;
     white-space:nowrap;
 }
-.my-player-timeline-inner .timeline-volume-control .volume button{
+.my-player-timeline-inner .my-player-timeline-volume-control .my-player-volume button{
     margin:0;
 }
-.my-player-timeline-inner .timeline-volume-control .progress-wrap{
+.my-player-timeline-inner .my-player-timeline-volume-control .my-player-progress-wrap{
     width:60px;
 }
 
-.progress-wrap{
+.my-player-progress-wrap{
     padding:0 10px;
     display:inline-block;
     vertical-align:middle;
 }
 
-.progress-outline{
+.my-player-progress-outline{
     height:1px;
     width:100%;
     background:#ccc;
     position: relative
 }
-.progress-bar{
+.my-player-progress-bar{
     position: absolute;
     top:0;
-    background: rebeccapurple;
+    background: mediumpurple;
     left:0;
     height:1px;
 }
@@ -121,21 +121,51 @@ button.glyphicon{opacity:1;transform:scale(1);top:0;font-size:14px;color:#2e2e2e
     margin-right:10px;
     vertical-align:middle;
 }
-.my-player-nowplaying .song-info{
+.my-player-nowplaying .my-player-song-info,.my-player-layer-playlist-songs .my-player-song-info{
     display:inline-block;
     vertical-align:middle;
-    width:210px;
+    width:209px;
 }
-.my-player-nowplaying .song-info p{
+.my-player-nowplaying .my-player-song-info p{
     position: relative;
     overflow: hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
-    font:12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif
+    font:12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
-.my-player-nowplaying .song-info .song-info-title{
+.my-player-nowplaying .my-player-song-info .my-player-song-info-title{
     color:#999;
 }
 .my-player-others{
     width:34px;
+}
+.my-player-layer-playlist{
+    position: absolute;
+    bottom:54px;
+    width:480px;
+    max-height:496px;
+    right:8px;
+    box-shadow:0 0 4px rgba(0,0,0,.25);
+}
+.my-player-layer-playlist-songs{
+    font-size:0;
+}
+.my-player-layer-playlist-songs li{
+    font:12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+.my-player-layer-playlist-songs .my-player-img-div{
+    width:7%;
+    display: inline-block;
+}
+.my-player-layer-playlist-songs img{
+    width:30px;
+    height:30px;
+}
+.my-player-layer-playlist-songs .my-player-song-info{
+    width:82%;
+
+}
+.my-player-layer-playlist-songs .my-player-song-time{
+    width:11%;
+    display:inline-block;
 }
