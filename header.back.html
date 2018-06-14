@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+    <html>
     <head>
         <title>title</title>
 
@@ -10,6 +10,8 @@
 
         <link rel="stylesheet" href="my.common.css">
         <link rel="stylesheet" href="my.header.css">
+        <link rel="stylesheet" href="/res/css/my.member.css">
+        <link rel="stylesheet" href="/res/css/my.login.css">
 
         <style>
         /* style */
@@ -20,11 +22,9 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
-        <script>
-            $(document).ready(function(){
+        <script src="/res/js/my.header.js"></script>
 
-            });
-        </script>
+
     </head>
 
     <body>
@@ -35,58 +35,37 @@
                     <div class="my-header-nav-wrap">
                         <div class="my-header-nav-item-wrap my-header-nav-item-left">
                             <div class="align-helper h45"></div>
-                            <a class="my-header-nav-item" href="#">HOME</a>
-                            <div class="my-header-nav-item glyphicon glyphicon-time
- my-header-glyphicon">2018-01-28</div>
-                            <div class="my-header-nav-item 	glyphicon glyphicon-download-alt">30</div>
-                            <a class="my-header-nav-item" href="#">이용권 구매</a>
+                            <div class="my-header-nav-item my-header-cursor" id="my-header-homebtn">HOME</div>
+                            <div class="my-header-nav-item">
+                                <span class="glyphicon glyphicon-time
+     my-header-glyphicon"></span>
+                                <span id="my-header-voucher">-/-</span>
+                                <span class="glyphicon glyphicon-download-alt"></span>
+                                <span id="my-header-downcnt">-/-</span>
+                            </div>
+                            <div class="my-header-nav-item my-header-cursor" id="my-header-voucherbtn">이용권 구매</div>
                         </div>
 
                         <div class="align-helper h45"></div>
                         <div class="my-header-nav-item-center">
                             <input type="search" class="my-header-nav-search" placeholder="Search...">
-                            <a class="my-header-nav-item" href="#">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </a>
+                            <span class="glyphicon glyphicon-search my-header-cursor" id="my-header-searchbtn"></span>
                         </div>
 
                         <div class="my-header-nav-item-wrap my-header-nav-item-right">
                             <div class="align-helper h45"></div>
-                            <a class="my-header-nav-item" href="#">로그인</a>
-                            <a class="my-header-nav-item" href="/register">회원가입</a>
+                            <div class="my-header-nav-item my-header-cursor" id="my-header-loginbtn">로그인</div>
+                            <div class="my-header-nav-item my-header-cursor" id="my-header-regbtn">회원가입</div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="my-header-menu">
-                <div class="my-container">
-                    <div class="my-header-menu-wrap">
-                        <div class="my-header-menu-item-left">
-                            <div class="align-helper h60"></div>
-                            <div class="my-header-menu-item">
-                                <a href="#" class="my-header-menu-link">차트</a>
-                            </div>
-                            <div class="my-header-menu-item">
-                                <a href="#" class="my-header-menu-link">최신</a>
-                            </div>
-                            <div class="my-header-menu-item">
-                                <a href="#" class="my-header-menu-link">장르</a>
-                            </div>
-                            <div class="my-header-menu-item">
-                                <a href="#" class="my-header-menu-link">공지사항</a>
-                            </div>
-                        </div>
-                        <div class="my-header-menu-item-right">
-                            <div class="align-helper h60"></div>
-                            <div class="my-header-menu-item">
-                                <a href="#" class="my-header-menu-link">마이뮤직</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
+
+        <script>
+            $(document).ready(function(){
+                $("#my-header-homebtn").on("click", my_header_home);
+            });
+        </script>
     </body>
 </html>
