@@ -1,0 +1,67 @@
+.my-artistlist-contents-wrap {
+    width: 100%;
+}
+
+.my-artistlist-title-wrap {
+    height: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#my-artistlist-title-no, .my-artistlist-no {
+    padding-right: 5px;
+    text-align: center;
+    width: 65px;
+}
+
+#my-artistlist-title-thumb {
+    width: 60px;
+}
+
+#my-artistlist-title-artistinfo, .my-artistlist-artistinfo {
+    padding-left: 12px;
+/*    width: 340px;*/
+    width: 300px;
+}
+
+#my-artistlist-title-activitytype, .my-artistlist-activitytype {
+    padding-left: 12px;
+    width: 100px;
+}
+
+#my-artistlist-title-agency, .my-artistlist-agency {
+    padding-left: 20px;
+    width: 200px;
+}
+
+#my-artistlist-title-debutdate, .my-artistlist-debutdate {
+    padding-left: 12px;
+    width: 100px;
+}
+
+#my-artistlist-title-like {
+    padding-left: 36px;
+    width: 135px;
+}
+
+.my-artistlist-like {
+    padding-left: 18px;
+}
+
+#my-artistlist-title-edit, #my-artistlist-title-delete, .my-artistlist-edit, .my-artistlist-delete {
+    text-align: center;
+    width: 50px;
+}
+
+.my-artistlist-editbtn, .my-artistlist-deletebtn {
+    transform: scale(1.2);
+    border: none;
+    background-color: inherit;
+}
+
+.my-artistlist-artist-row {
+    height: 85px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+

@@ -40,7 +40,7 @@
 }
 
 .my-header-nav-item-left > .my-header-nav-item {
-    margin-right: 15px;
+    margin: 0 9px;
 }
 
 .my-header-nav-item-right {
@@ -112,6 +112,18 @@ a.my-header-menu-link:link, a.my-header-menu-link:visited, a.my-header-menu-link
     text-decoration: none;
 }
 
-a.my-header-menu-link:visited {
-    color: black;
+#my-header-voucher {
+    display: inline-block;
+    text-align: left;
+    width: 72px;
+}
+
+#my-header-downcont {
+    display: inline-block;
+    text-align: left;
+    width: 15px;
+}
+
+.my-header-cursor {
+    cursor: pointer;
 }
