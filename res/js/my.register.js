@@ -124,7 +124,7 @@ function register_emailCheck() {
 }
 
 function register_emailValidationCheck() {
-    var regex = /^[a-zA-Z0-9@]{5,100}$/;
+    var regex = /^[a-zA-Z0-9@\\.]{5,100}$/;
     var email_input = $("#my-register-email");
     var email = email_input.val();
     var email_info = $("#my-register-email-info");
@@ -150,23 +150,28 @@ function register_emailDuplicationCheck() {
 }
 
 function register_emailDuplicationCheckSuccess(data) {
-    var email_input = $("#my-register_email");
+    var email_input = $("#my-register-email");
 
     if (data) {
-        console.log(data);
         email_input.addClass("my-member-red-border");
         $("#my-register-email-info").text("이미 사용중인 이메일 입니다.").show();
+        register_emailValidCheck = false;
     } else {
-        console.log("no-data");
         email_input.addClass("my-member-green-border");
+        register_emailValidCheck = true;
     }
+}
+
+function register_resetEmailValidation() {
+	register_emailValidCheck = false;
+	$("#my-register-email").removeClass("my-member-green-border");
 }
 
 function register_termCheck() {
     var terms = $(".my-register-term-checkbox");
 
     register_termValidCheck = false;
-    register_termAgreementCheck();
+    register_termAgreementInfoHide();
 
     for (var i = 0; i < terms.length; i++) {
         if (!terms.eq(i).prop("checked")) {
@@ -180,6 +185,7 @@ function register_termCheck() {
 
 function register_termAllCheck() {
     $(".my-register-term-checkbox").prop("checked", $(this).prop("checked"));
+    register_termAgreementInfoHide();
 }
 
 function register_termAgreementCheck() {
@@ -195,6 +201,23 @@ function register_termAgreementCheck() {
 
     $("#my-register-term-info").hide();
     register_termValidCheck = true;
+}
+
+function register_termAgreementInfoHide() {
+	var required_term = $(".my-register-term-required");
+	var hideInfo = true;
+
+	for (var i = 0; i < required_term.length; i++) {
+		if (!required_term.eq(i).prop("checked")) {
+			hideInfo = false;
+			break;
+		}
+	}
+
+	if (hideInfo) {
+		$("#my-register-term-info").hide();
+		register_termValidCheck = true;
+	}
 }
 
 function register_doRegister() {
@@ -221,9 +244,27 @@ function register_doRegister() {
     }
 
     if (submit) {
-        register_encpw();
-        $("#register-form").submit();
+//    	register_encpw();
+//        $("#register-form").submit();
+        $.ajax({
+            type: "POST",
+            url: "register",
+            data: {
+                id: $("#my-register-id").val(),
+                pw: register_encpw(),
+                email: $("#my-register-email").val()
+            },
+            success: my_register_success_doRegister,
+            error: function() {
+                consoe.log("실패했음");
+            }
+        });
     }
+}
+
+function my_register_success_doRegister(jobj) {
+    console.log("회원가입 성공했음");
+    console.log(jobj.rslt);
 }
 
 function register_clipTerm() {
@@ -239,8 +280,10 @@ function register_clipTerm() {
 }
 
 function register_encpw() {
-    var pw = $("#my-register-pw").val();
-    var encpw = SHA256(pw);
+    var pw = $("#my-register-pw");
+    var encpw = SHA256(pw.val());
     pw.val(encpw);
+    console.log(encpw);
     $("#my-register-pwchck").val("");
+    return encpw;
 }

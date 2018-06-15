@@ -1,11 +1,25 @@
 li.my-menu-menuitem {
-    padding: 0 30px;
+    padding: 0 30px 10px 30px;
     display: inline-block;
     font-size: 1.4em;
 }
 
+li.my-menu-menuitem:hover {
+	border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+
+li.my-menu-menuitem > span, li.my-menu-menuitem > a:visited {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+li.my-menu-menuitem:hover > span {
+	color: rgba(0, 0, 0, 0.8);
+}
+
 .my-menu-wrap {
     padding-top: 30px;
+    height: 60px;
     width: 100%;
     position: relative;
 }

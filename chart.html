@@ -21,27 +21,12 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
-        <script>
-            $(document).ready(function(){
 
-            });
-        </script>
     </head>
 
     <body>
-        <div class="my-container">
-            <div class="my-sep h20"></div>
-            <div class="my-submenu-wrap">
-                <ul class="my-submenu-container">
-                    <li class="my-submenu-menuitem-4 my-submenu-selected"><a class="my-submenu-menulink my-submenu-selected" href="#">실시간</a></li>
-                    <li class="my-submenu-menuitem-4"><a class="my-submenu-menulink" href="#">월간</a></li>
-                    <li class="my-submenu-menuitem-4"><a class="my-submenu-menulink" href="#">주간</a></li>
-                    <li class="my-submenu-menuitem-4"><a class="my-submenu-menulink" href="#">일간</a></li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="my-container">
+        <div class="my-container" id="my-contents-container">
             <table class="my-chart-contents-wrap">
                 <thead class="my-chart-title">
                     <tr class="my-chart-title-wrap">
@@ -56,11 +41,17 @@
                         <th id="my-chart-title-down">다운</th>
                     </tr>
                 </thead>
-                <tbody class="my-chart-contents">
-                    <tr class="my-chart-music-row">
-                        <td class="my-chart-cb"><input type="checkbox"></td>
+                <tbody class="my-chart-contents" id="my-chart-music-container">
+
+                </tbody>
+            </table>
+
+<!--            음원 템플릿-->
+            <table style="display: none">
+            <tr class="my-chart-music-row" id="my-chart-music-row-template" style="display: none;">
+                        <td class="my-chart-cb"><input id="my-chart-cb" type="checkbox"></td>
                         <td class="my-chart-no">1</td>
-                        <td class="my-chart-thumb"><img src="http://via.placeholder.com/60x60"></td>
+                        <td class="my-chart-thumb"><img class="my-chart-img" src="http://via.placeholder.com/60x60"></td>
                         <td class="my-chart-musicinfo">
                             <div class="my-chart-name">name</div>
                             <div class="my-chart-artist">artist</div>
@@ -74,8 +65,16 @@
                         <td class="my-chart-add"><button class="glyphicon glyphicon-plus my-chart-addbtn"></button></td>
                         <td class="my-chart-down"><button class="glyphicon glyphicon-download-alt my-chart-downbtn"></button></td>
                     </tr>
-                </tbody>
             </table>
         </div>
+
+
+
+        <script src="/res/js/my.chart.js"></script>
+        <script>
+            $(document).ready(function(){
+                my_chart_test();
+            });
+        </script>
     </body>
 </html>

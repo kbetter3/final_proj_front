@@ -17,29 +17,36 @@
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="/res/js/my.menu.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
-        <script>
-            $(document).ready(function(){
 
-            });
-        </script>
     </head>
 
     <body>
         <div class="my-container">
             <div class="my-menu-wrap">
                 <ul class="my-menu-left">
-                    <li class="my-menu-menuitem"><a href="${rootPath}/chart">차트</a></li>
-                    <li class="my-menu-menuitem"><a href="${rootPath}/new">최신</a></li>
-                    <li class="my-menu-menuitem"><a href="${rootPath}/genre">장르</a></li>
+                    <li class="my-menu-menuitem" id="my-menu-chart"><span>차트</span></li>
+                    <li class="my-menu-menuitem" id="my-menu-lastest"><span>최신</span></li>
+                    <li class="my-menu-menuitem" id="my-menu-genre"><span>장르</span></li>
                 </ul>
-                <ul class="my-menu-right">
-                    <li class="my-menu-menuitem"><a href="${rootPath}/mymusic">마이뮤직</a></li>
-                    <li class="my-menu-menuitem"><a href="${rootPath}/notice">공지사항</a></li>
+                <ul class="my-menu-right" id="my-menu-right-container">
+                    <li class="my-menu-menuitem" id="my-menu-mymusic"><span>마이뮤직</span></li>
+                    <li class="my-menu-menuitem" id="my-menu-notice"><span>공지사항</span></li>
                 </ul>
             </div>
+
+            <script>
+            $(document).ready(function(){
+                $("#my-menu-chart").on("click", my_menu_chart);
+                $("#my-menu-lastest").on("click", my_menu_lastest);
+                $("#my-menu-genre").on("click", my_menu_genre);
+                $("#my-menu-mymenu").on("click", my_menu_mymenu);
+                $("#my-menu-notice").on("click", my_menu_notice);
+            });
+        </script>
         </div>
     </body>
 </html>
