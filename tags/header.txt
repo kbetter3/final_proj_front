@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-    <html>
-    <head>
-        <title>title</title>
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
-        <link rel="stylesheet" href="my.common.css">
-        <link rel="stylesheet" href="my.header.css">
-        <link rel="stylesheet" href="/res/css/my.member.css">
-        <link rel="stylesheet" href="/res/css/my.login.css">
-        <link rel="stylesheet" href="/res/css/my.menu.css">
-        <link rel="stylesheet" href="/res/css/my.submenu.css">
-        <link rel="stylesheet" href="/res/css/my.chart.css">
-
-        <style>
-        /* style */
-        </style>
-
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-latest.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-
-        <script src="/res/js/my.header.js"></script>
-
-
-    </head>
-
-    <body>
-<!--        헤더 시작 지점-->
-        <div class="my-header-wrap">
+<div class="my-header-wrap">
             <div class="my-header-top-deco"></div>
             <div class="my-header-nav">
                 <div class="my-container">
@@ -55,7 +21,7 @@
                             <input type="search" class="my-header-nav-search" placeholder="Search...">
                             <span class="glyphicon glyphicon-search my-header-cursor" id="my-header-searchbtn"></span>
                         </div>
-
+                        
                         <div class="my-header-nav-item-wrap my-header-nav-item-right">
                             <div class="align-helper h45"></div>
 <!--                            로그인 여부에 따라 내용물이 변하는 컨테이너-->
@@ -77,26 +43,3 @@
                 $("#my-header-regbtn").on("click", my_header_register);
             });
         </script>
-
-<!--        메뉴 시작지점-->
-        <div class="my-container" id="my-menu-container">
-        </div>
-
-<!--        서브메뉴 시작지점-->
-        <div class="my-container" id="my-submenu-container">
-        </div>
-
-<!--        컨텐츠 시작 지점-->
-        <div class="my-container" id="my-contents-container">
-        </div>
-
-        <script>
-            $(document).ready(function(){
-                my_header_header();
-                my_menu_menu();
-                my_submenu_chartsubmenu();
-                my_chart_chart();
-            });
-        </script>
-    </body>
-</html>

@@ -1,0 +1,8 @@
+<span class="my-header-nav-item my-header-cursor" id="my-header-loginbtn">로그인</span>
+                                <span class="my-header-nav-item my-header-cursor" id="my-header-regbtn">회원가입</span>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#my-header-loginbtn").on("click", my_header_login);
+                                        $("#my-header-regbtn").on("click", my_header_register);
+                                    });
+                                </script>

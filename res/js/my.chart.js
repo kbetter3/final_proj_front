@@ -2,7 +2,7 @@ function my_chart_test() {
     var r = $("#my-chart-music-row-template").clone(true, true);
     r.find("#my-chart-cb").attr("name", "mno").attr("value", "kk2");
 
-    $("#my-chart-music-container").append(r.clone().show()).append(r.clone().show());
+    $("#my-chart-music-container").html("").append(r.clone().show()).append(r.clone().show());
 }
 
 function my_chart_add_music(no, jobj) {
@@ -34,5 +34,5 @@ function my_chart_chart() {
 }
 
 function my_chart_success_chart(jobj) {
-    $("#my-contents-container").append(jobj.tags);
+    $("#my-contents-container").html("").append(jobj.tags);
 }

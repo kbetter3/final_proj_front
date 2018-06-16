@@ -1,0 +1,8 @@
+<span class="my-header-nav-item my-header-cursor" id="my-header-useridbtn"></span>
+                                <span class="my-header-nav-item my-header-cursor" id="my-header-logoutbtn">로그아웃</span>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#my-header-useridbtn").on("click", my_header_userid);
+                                        $("#my-header-logoutbtn").on("click", my_header_logout);
+                                    });
+                                </script>

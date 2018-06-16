@@ -55,8 +55,29 @@
                         <div class="my-header-nav-item-wrap my-header-nav-item-right">
                             <div class="align-helper h45"></div>
                             <div id="my-header-right-container">
+<!--
+                                로그인 상태가 아닐 때 보일 헤더 메뉴
                                 <span class="my-header-nav-item my-header-cursor" id="my-header-loginbtn">로그인</span>
                                 <span class="my-header-nav-item my-header-cursor" id="my-header-regbtn">회원가입</span>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#my-header-loginbtn").on("click", my_header_login);
+                                        $("#my-header-regbtn").on("click", my_header_register);
+                                    });
+                                </script>
+-->
+
+<!--
+                                로그인 상태일 때 보일 헤더 메뉴
+                                <span class="my-header-nav-item my-header-cursor" id="my-header-useridbtn"></span>
+                                <span class="my-header-nav-item my-header-cursor" id="my-header-logoutbtn">로그아웃</span>
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#my-header-useridbtn").on("click", my_header_userid);
+                                        $("#my-header-logoutbtn").on("click", my_header_logout);
+                                    });
+                                </script>
+-->
                             </div>
                         </div>
                     </div>
@@ -68,8 +89,6 @@
             $(document).ready(function(){
                 $("#my-header-homebtn").on("click", my_header_home);
                 $("#my-header-voucherbtn").on("click", my_header_voucher);
-                $("#my-header-loginbtn").on("click", my_header_login);
-                $("#my-header-regbtn").on("click", my_header_register);
             });
         </script>
     </body>
