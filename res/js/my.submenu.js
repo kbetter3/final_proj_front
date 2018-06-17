@@ -12,5 +12,17 @@ function my_submenu_success_submenu(jobj) {
 
 
 function my_submenu_getMusic() {
-    console.log($(this).attr("controller"));
+    $.ajax({
+        url: "getmusic",
+        data: {
+            type: $(this).attr("controller"),
+            page: 1
+        },
+        success: my_submenu_success_getMusic
+    });
+}
+
+function my_submenu_success_getMusic(jobj) {
+    var music = jobj.music;
+    console.log(jobj);
 }
