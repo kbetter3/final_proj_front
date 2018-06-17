@@ -38,13 +38,35 @@ function login_login() {
     login_pwCheck();
 
     if (login_idNullCheck && login_pwNullCheck) {
-        login_encpw();
-        $("#login-form").submit();
+        $.ajax({
+            type: "POST",
+            url: "login",
+            data: {
+                id: $("#my-login-id").val(),
+                pw: login_encpw()
+            },
+            success: login_success_login,
+            error: login_error_login
+        });
     }
 }
+
+function login_success_login(jobj) {
+    console.log("로그인 성공하였음");
+    my_header_header();
+    my_menu_menu();
+    my_submenu_chartsubmenu();
+    my_chart_chart();
+}
+
+function login_error_login(jobj) {
+    console.log(jobj.msg);
+}
+
 
 function login_encpw() {
     var pw = $("#my-login-pw").val();
     var encpw = SHA256(pw);
-    $("#my-login-pw").val(encpw);
+//    $("#my-login-pw").val(encpw);
+    return encpw;
 }

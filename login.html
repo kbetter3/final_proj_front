@@ -89,15 +89,14 @@
                     </div>
                 </div>
                 </form>
+                <div class="my-login-errormsg">${error}</div>
             </div>
         </div>
 
-        <script src="/res/js/my.member.js"></script>
-        <script src="/res/js/my.login.js"></script>
         <script>
             $(document).ready(function() {
-//                $("#my-login-id").on("keyup", login_idCheck);
-//                $("#my-login-pw").on("keyup", login_pwCheck);
+                $("#my-login-id").on("keyup", login_idCheck);
+                $("#my-login-pw").on("keyup", login_pwCheck);
                 $("button.my-login-loginbtn").on("click", login_login);
             });
         </script>
