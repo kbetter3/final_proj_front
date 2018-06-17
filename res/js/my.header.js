@@ -64,8 +64,15 @@ function my_header_success_register(jobj) {
 
 function my_header_userid() {
     $.ajax({
-
+        async: true,
+        url: "myinfo",
+        success: my_header_success_userid
     });
+}
+
+function my_header_success_userid(jobj) {
+    $("#my_menu_container").html("");
+    $("#my_submenu-container").html("").append(jobj.tags);
 }
 
 
