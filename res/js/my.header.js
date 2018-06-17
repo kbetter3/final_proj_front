@@ -2,9 +2,9 @@ function my_header_home() {
     $("#my-submenu-container").html("");
     $("#my-contents-container").html("");
 
-    my_menu_menu();
-    my_submenu_chartsubmenu();
     my_chart_chart();
+    my_menu_menu();
+    my_submenu_submenu("chartsubmenu");
 }
 
 function my_header_success_home(json) {

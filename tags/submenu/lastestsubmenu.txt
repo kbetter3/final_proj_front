@@ -5,10 +5,10 @@
                     <li class="my-submenu-menuitem-2"><span class="my-submenu-menulink" id="my-submenu-lastest-int">해외</span></li>
                 </ul>
             </div>
-            
+
             <script>
             $(document).ready(function(){
-                $("#my-submenu-lastest-loc").on("click", my_chart_getMusic("lastestloc", 1));
-                $("#my-submenu-lastest-int").on("click", my_chart_getMusic("lastestint", 1));
+                $("#my-submenu-lastest-loc").on("click", my_submenu_getMusic("lastestloc", 1));
+                $("#my-submenu-lastest-int").on("click", my_submenu_getMusic("lastestint", 1));
             });
             </script>
