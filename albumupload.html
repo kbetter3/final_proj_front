@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>title</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="my.common.css">
+        <link rel="stylesheet" href="my.header.css">
+        <link rel="stylesheet" href="/res/css/my.member.css">
+        <link rel="stylesheet" href="/res/css/my.login.css">
+        <link rel="stylesheet" href="/res/css/my.menu.css">
+        <link rel="stylesheet" href="/res/css/my.submenu.css">
+        <link rel="stylesheet" href="/res/css/my.chart.css">
+        <link rel="stylesheet" href="/res/css/my.upload.css">
+        <style>
+        /* style */
+        </style>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+        <script src="/res/js/my.header.js"></script>
+        <script src="/res/js/my.state.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+                $( "#my-upload-album-launch" ).datepicker();
+            } );
+        </script>
+
+    </head>
+
+    <body>
+<!--        헤더 시작 지점-->
+        <div class="my-header-wrap">
+            <div class="my-header-top-deco"></div>
+            <div class="my-header-nav">
+                <div class="my-container">
+                    <div class="my-header-nav-wrap">
+                        <div class="my-header-nav-item-wrap my-header-nav-item-left">
+                            <div class="align-helper h45"></div>
+                            <div class="my-header-nav-item my-header-cursor" id="my-header-homebtn">HOME</div>
+                            <div class="my-header-nav-item">
+                                <span class="glyphicon glyphicon-time
+     my-header-glyphicon"></span>
+                                <span id="my-header-voucher">-/-</span>
+                                <span class="glyphicon glyphicon-download-alt"></span>
+                                <span id="my-header-downcnt">-/-</span>
+                            </div>
+                            <div class="my-header-nav-item my-header-cursor" id="my-header-voucherbtn">이용권 구매</div>
+                        </div>
+
+                        <div class="align-helper h45"></div>
+                        <div class="my-header-nav-item-center">
+                            <input type="search" class="my-header-nav-search" placeholder="Search...">
+                            <span class="glyphicon glyphicon-search my-header-cursor" id="my-header-searchbtn"></span>
+                        </div>
+
+                        <div class="my-header-nav-item-wrap my-header-nav-item-right">
+                            <div class="align-helper h45"></div>
+<!--                            로그인 여부에 따라 내용물이 변하는 컨테이너-->
+                            <div id="my-header-right-container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                $("#my-header-homebtn").on("click", my_header_home);
+                $("#my-header-voucherbtn").on("click", my_header_voucher);
+            });
+        </script>
+
+<!--        메뉴 시작지점-->
+        <div class="my-container" id="my-menu-container">
+        </div>
+
+<!--        서브메뉴 시작지점-->
+        <div class="my-container" id="my-submenu-container">
+        </div>
+
+<!--        컨텐츠 시작 지점-->
+        <div class="my-container" id="my-contents-container">
+            <!-- 여기에 작성하면 됨 -->
+            <div class="my-upload-container">
+                <h2 class="my-upload-title">앨범 등록</h2>
+                <form action="albumUpload" method="post" id="upload-form">
+                    <div class="my-upload-img-div">
+                        <div class="my-upload-img-wrap">
+                            <p class="my-upload-img-label">
+                                <label class="my-upload-label" for="my-upload-album-img">300x300</label>
+                            </p>
+                            <img id="my-upload-album-img">
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <p class="my-upload-label">앨범 사진</p>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <a class="my-upload-fileupload-button"><label class="my-upload-label3" for="my-upload-album-picture">이미지 업로드</label></a>
+                                <input class="my-upload-input2" type="file" id="my-upload-album-picture" name="album-picture" accept=".jpg, .jpeg, .png, .gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-upload-content-div">
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-album-name">이름</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <input class="my-upload-input" type="text" id="my-upload-album-name" name="album-name" placeholder="앨범 이름">
+                            </div>
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-album-artist">아티스트</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <select id="my-upload-album-artist" name="album-artist" class="my-upload-input">
+                                    <option value="" disabled selected>아티스트 선택</option>
+                                    <option value="1">Juice WRLD</option>
+                                    <option value="2">BTS</option>
+                                    <option value="3">Trippie Redd</option>
+                                    <option value="4">BABY</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-album-launch">발매일</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <input class="my-upload-input" type="text" id="my-upload-album-launch" name="album-launch" placeholder="MM/DD/YYYY">
+                            </div>
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-album-genre">장르</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <select id="my-upload-album-genre" name="album-genre" class="my-upload-input">
+                                    <option value="" disabled selected>장르 선택</option>
+                                    <option value="1">Rock</option>
+                                    <option value="2">Classic</option>
+                                    <option value="3">Electronic</option>
+                                    <option value="4">Hiphop</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-album-company">소속사</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <input class="my-upload-input" type="text" id="my-upload-album-company" name="album-company" placeholder="소속사 이름">
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <button class="my-upload-submit-button">등록하기</button>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                my_header_header();
+                my_menu_menu();
+                my_submenu_chartsubmenu();
+                my_chart_chart();
+            });
+        </script>
+    </body>
+</html>

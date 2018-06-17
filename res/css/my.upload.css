@@ -18,14 +18,14 @@ body{
     background-color: white;
     font-size:0;
 }
-.my-upload-img-div{
+.my-upload-img-div,.my-upload-music-div{
     display:inline-block;
     margin-right:20px;
     width:390px;
     text-align:center;
     vertical-align: top;
 }
-.my-upload-img-wrap{
+.my-upload-img-wrap,.my-upload-music-wrap{
     position:relative;
     margin-top:20px;
 }
@@ -37,7 +37,7 @@ body{
     margin:0 0 0 -150px;
     height:300px;
 }
-.my-upload-img-wrap .my-upload-label{
+.my-upload-img-wrap .my-upload-label,.my-upload-music-wrap .my-upload-label{
     display:table-cell;
     width:300px;
     height:300px;
@@ -45,13 +45,19 @@ body{
     color:#ccc;
     font-weight:normal;
 }
-.my-upload-img-div .my-upload-row-left{
+.my-upload-img-div .my-upload-row-left,.my-upload-music-div .my-upload-row-left{
     text-align:left;
 }
-.my-upload-img-div img{
+.my-upload-img-div img,.my-upload-music-div textarea{
     width:300px;
     height:300px;
     display:inline-block;
+}
+.my-upload-music-div textarea{
+    resize:none;
+    font-size:16px;
+    padding:10px;
+    outline:none;
 }
 .my-upload-content-div{
     width:550px;
@@ -79,6 +85,16 @@ body{
     width:115px;
     margin-right:20px;
 }
+.my-upload-music-div .my-upload-row-left{
+    width:120px;
+}
+.my-upload-music-div .my-upload-row-right .my-upload-label{
+    max-width:160px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+
+}
 .my-upload-label, .my-upload-input {
     margin: 0;
     font-size: 1.2em;
@@ -89,9 +105,15 @@ body{
     font-weight:700;
     font-size:16px;
 }
+input.my-upload-input-radio{
+    vertical-align:middle;
+    margin:0;
+    display:inline-block;
+}
 .my-upload-label2{
     font-weight: normal;
     margin:0 30px 0 5px;
+    vertical-align:middle;
 }
 .my-upload-input {
     border: 1px solid rgba(0, 0, 0, 0.26);
@@ -101,7 +123,6 @@ body{
     width: 310px;
     height: 60px;
 }
-
 .my-upload-input:focus {
     outline: none;
 }
