@@ -12,7 +12,8 @@ function my_submenu_success_submenu(jobj) {
 
 
 function my_submenu_getMusic() {
-    console.log($(this).attr("controller"));
+    my_chart_chart();
+
     $.ajax({
         url: "getmusic",
         data: {

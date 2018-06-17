@@ -10,7 +10,7 @@
 
             <script>
             $(document).ready(function(){
-                console.log("실행되었다");
+                my_submenu_getMusic();
                 $("#my-submenu-chart-realtime").on("click", my_submenu_getMusic);
                 $("#my-submenu-chart-monthly").on("click", my_submenu_getMusic);
                 $("#my-submenu-chart-weekly").on("click", my_submenu_getMusic);
