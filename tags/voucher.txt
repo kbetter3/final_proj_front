@@ -1,0 +1,66 @@
+<div class="my-voucher-container">
+                <h2 class="my-voucher-title">이용권 구매</h2>
+                <div class="my-voucher-div">
+                    <ul>
+                        <li>
+                            <!-- ''(default) / my-voucher-on -->
+                            <button class="my-voucher-buy-button">
+                                <dl>
+                                    <dt class="my-voucher-icon">
+                                        <span class="glyphicon glyphicon-music"></span>
+                                        <span class="my-voucher-icon-text"><p>30</p></span>
+                                    </dt>
+                                    <dd class="my-voucher-desc">
+                                        <p>스트리밍 <em>30일</em></p>
+                                        <p>다운로드 <em>30회</em></p>
+                                    </dd>
+                                    <dd class="my-voucher-price">
+                                        <p>9,900원</p>
+                                    </dd>
+                                </dl>
+                                <p class="my-voucher-buy"><span>구매하기</span></p>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="my-voucher-buy-button">
+                                <dl>
+                                    <dt class="my-voucher-icon">
+                                        <span class="glyphicon glyphicon-music"></span>
+                                        <span class="my-voucher-icon-text"><p>60</p></span>
+                                    </dt>
+                                    <dd class="my-voucher-desc">
+                                        <p>스트리밍 <em>60일</em></p>
+                                        <p>다운로드 <em>60회</em></p>
+                                    </dd>
+                                    <dd class="my-voucher-price">
+                                        <p>18,000원</p>
+                                    </dd>
+                                </dl>
+                                <p class="my-voucher-buy"><span>구매하기</span></p>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="my-voucher-buy-button">
+                                <dl>
+                                    <dt class="my-voucher-icon">
+                                        <span class="glyphicon glyphicon-music"></span>
+                                        <span class="my-voucher-icon-text"><p>90</p></span>
+                                    </dt>
+                                    <dd class="my-voucher-desc">
+                                        <p>스트리밍 <em>90일</em></p>
+                                        <p>다운로드 <em>90회</em></p>
+                                    </dd>
+                                    <dd class="my-voucher-price">
+                                        <p>25,000원</p>
+                                    </dd>
+                                </dl>
+                                <p class="my-voucher-buy"><span>구매하기</span></p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+            $(document).ready(function(){
+            });
+            </script>

@@ -15,7 +15,7 @@
                 $("#my-menu-chart").on("click", my_menu_chart);
                 $("#my-menu-lastest").on("click", my_menu_lastest);
                 $("#my-menu-genre").on("click", my_menu_genre);
-                $("#my-menu-mymenu").on("click", my_menu_mymenu);
+                $("#my-menu-mymusic").on("click", my_menu_mymenu);
                 $("#my-menu-notice").on("click", my_menu_notice);
             });
             </script>

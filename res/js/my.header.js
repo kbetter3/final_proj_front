@@ -27,7 +27,17 @@ function my_header_success_header(jobj) {
 
 
 function my_header_voucher() {
+    $.ajax({
+        type: "GET",
+        url: "voucher",
+        success: my_header_success_voucher
+    });
+}
 
+function my_header_success_voucher(jobj) {
+    $("#my-menu-container").html("");
+    $("#my-submenu-container").html("");
+    $("#my-contents-cnotainer").html("").append(jobj.tags);
 }
 
 
@@ -63,16 +73,16 @@ function my_header_success_register(jobj) {
 
 
 function my_header_userid() {
+    console.log("클릭했냐?");
     $.ajax({
-        async: true,
         url: "myinfo",
         success: my_header_success_userid
     });
 }
 
 function my_header_success_userid(jobj) {
-    $("#my_menu_container").html("");
-    $("#my_submenu-container").html("").append(jobj.tags);
+    $("#my-menu-container").html("");
+    $("#my-submenu-container").html("").append(jobj.tags);
 }
 
 
