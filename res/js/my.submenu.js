@@ -12,5 +12,5 @@ function my_submenu_success_submenu(jobj) {
 
 
 function my_submenu_getMusic() {
-    console.log("my.submenu.getMusic");
+    console.log($(this).attr("controller"));
 }

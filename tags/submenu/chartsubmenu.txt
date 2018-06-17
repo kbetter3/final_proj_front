@@ -1,19 +1,19 @@
 <div class="my-sep h20"></div>
             <div class="my-submenu-wrap">
                 <ul class="my-submenu-container">
-                    <li class="my-submenu-menuitem-4 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-chart-realtime">실시간</span></li>
-                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-chart-monthly">월간</span></li>
-                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-chart-weekly">주간</span></li>
-                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-chart-daily">일간</span></li>
+                    <li class="my-submenu-menuitem-4 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-chart-realtime" controller="chartrealtime">실시간</span></li>
+                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-chart-monthly" controller="chartmonthly">월간</span></li>
+                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-chart-weekly" controller="chartweekly">주간</span></li>
+                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-chart-daily" controller="chartdaily">일간</span></li>
                 </ul>
             </div>
-            
+
             <script>
             $(document).ready(function(){
                 console.log("실행되었다");
-                $("#my-submenu-chart-realtime").on("click", my_submenu_getMusic("chartrealtime", 1));
-                $("#my-submenu-chart-monthly").on("click", my_submenu_getMusic("chartmonthly", 1));
-                $("#my-submenu-chart-weekly").on("click", my_submenu_getMusic("chartweekly", 1));
-                $("#my-submenu-chart-daily").on("click", my_submenu_getMusic("chartdaily", 1));
+                $("#my-submenu-chart-realtime").on("click", my_submenu_getMusic);
+                $("#my-submenu-chart-monthly").on("click", my_submenu_getMusic);
+                $("#my-submenu-chart-weekly").on("click", my_submenu_getMusic);
+                $("#my-submenu-chart-daily").on("click", my_submenu_getMusic);
             });
             </script>
