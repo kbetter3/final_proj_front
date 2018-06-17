@@ -1,25 +1,25 @@
 <div class="my-sep h20"></div>
             <div class="my-submenu-wrap">
                 <ul class="my-submenu-container">
-                    <li class="my-submenu-menuitem-7 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-genre-ballad">발라드</span></li>
-                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-dance">댄스</span></li>
-                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-hiphop">랩/힙합</span></li>
-                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-rnb">R&amp;B</span></li>
-                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-indie">인디음악</span></li>
-                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-rock">록/메탈</span></li>
-                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-teuroteu">트로트</span></li>
+                    <li class="my-submenu-menuitem-7 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-genre-ballad" controller="genreballad">발라드</span></li>
+                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-dance" controller="genredance">댄스</span></li>
+                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-hiphop" controller="genrehiphop">랩/힙합</span></li>
+                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-rnb" controller="genrernb">R&amp;B</span></li>
+                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-indie" controller="genreindie">인디음악</span></li>
+                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-rock" controller="genrerock">록/메탈</span></li>
+                    <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-teuroteu" controller="genreteuroteu">트로트</span></li>
                 </ul>
             </div>
-            
+
             <script>
             $(document).ready(function(){
                 console.log("실행되었다");
-                $("#my-submenu-genre-ballad").on("click", my_chart_getMusic("genreballad"), 1);
-                $("#my-submenu-genre-dance").on("click", my_chart_getMusic("genredance"), 1);
-                $("#my-submenu-genre-hiphop").on("click", my_chart_getMusic("genrehiphop"), 1);
-                $("#my-submenu-genre-rnb").on("click", my_chart_getMusic("genrernb"), 1);
-                $("#my-submenu-genre-indie").on("click", my_chart_getMusic("genreindie"), 1);
-                $("#my-submenu-genre-rock").on("click", my_chart_getMusic("genrerock"), 1);
-                $("#my-submenu-genre-teuroteu").on("click", my_chart_getMusic("genreteuroteu"), 1);
+                $("#my-submenu-genre-ballad").on("click", my_submenu_getMusic);
+                $("#my-submenu-genre-dance").on("click", my_submenu_getMusic);
+                $("#my-submenu-genre-hiphop").on("click", my_submenu_getMusic);
+                $("#my-submenu-genre-rnb").on("click", my_submenu_getMusic);
+                $("#my-submenu-genre-indie").on("click", my_submenu_getMusic);
+                $("#my-submenu-genre-rock").on("click", my_submenu_getMusic);
+                $("#my-submenu-genre-teuroteu").on("click", my_submenu_getMusic);
             });
         </script>
