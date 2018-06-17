@@ -13,6 +13,7 @@ function my_header_success_home(json) {
 
 
 function my_header_header() {
+    console.log("헤더 ajax");
     $.ajax({
         url: "header",
         success: my_header_success_header
@@ -21,6 +22,7 @@ function my_header_header() {
 
 function my_header_success_header(jobj) {
     $("#my-header-right-container").html("").append(jobj.tags);
+    $("#my-header-useridbtn").text(jobj.uid);
 }
 
 
@@ -73,5 +75,5 @@ function my_header_logout() {
 }
 
 function my_header_success_logout(jobj) {
-    $("#my-header-right-container").html("").append(jobj.tags);
+    my_header_header();
 }

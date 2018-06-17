@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>title</title>
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
-        <link rel="stylesheet" href="../my.common.css">
-        <link rel="stylesheet" href="../res/css/my.chart.css">
-        <link rel="stylesheet" href="../res/css/my.submenu.css">
-
-        <style>
-        /* style */
-        </style>
-
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-latest.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-
-        <script>
-            $(document).ready(function(){
-
-            });
-        </script>
-    </head>
-
-    <body>
-        <div class="my-container">
-            <div class="my-sep h20"></div>
+<div class="my-sep h20"></div>
             <div class="my-submenu-wrap">
                 <ul class="my-submenu-container">
                     <li class="my-submenu-menuitem-7 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-genre-ballad">발라드</span></li>
@@ -42,7 +10,7 @@
                     <li class="my-submenu-menuitem-7"><span class="my-submenu-menulink" id="my-submenu-genre-teuroteu">트로트</span></li>
                 </ul>
             </div>
-
+            
             <script>
             $(document).ready(function(){
                 console.log("실행되었다");
@@ -55,6 +23,3 @@
                 $("#my-submenu-genre-teuroteu").on("click", my_chart_getMusic("genreteuroteu"), 1);
             });
         </script>
-        </div>
-    </body>
-</html>

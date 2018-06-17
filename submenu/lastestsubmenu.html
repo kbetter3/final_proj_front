@@ -29,17 +29,19 @@
             <div class="my-sep h20"></div>
             <div class="my-submenu-wrap">
                 <ul class="my-submenu-container">
-                    <li class="my-submenu-menuitem-2 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-lastest-loc">국내</span></li>
+                    <li class="my-submenu-menuitem-2 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-lastest-dom">국내</span></li>
                     <li class="my-submenu-menuitem-2"><span class="my-submenu-menulink" id="my-submenu-lastest-int">해외</span></li>
                 </ul>
             </div>
-        </div>
 
-        <script>
+            <script>
             $(document).ready(function(){
                 $("#my-submenu-lastest-loc").on("click", my_chart_getMusic("lastestloc", 1));
                 $("#my-submenu-lastest-int").on("click", my_chart_getMusic("lastestint", 1));
             });
-        </script>
+            </script>
+        </div>
+
+
     </body>
 </html>

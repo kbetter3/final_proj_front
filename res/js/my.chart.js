@@ -22,15 +22,19 @@ function my_chart_add_music(no, jobj) {
 }
 
 function my_chart_getMusic(target, page) {
-
+    // 작성해야함
 }
 
-function my_chart_chart() {
+
+function my_chart_chart(target, page) {
     $.ajax({
         type: "POST",
         url: "chart",
+        async: true,
         success: my_chart_success_chart
     });
+
+    my_chart_getMusic(target, paeg);
 }
 
 function my_chart_success_chart(jobj) {

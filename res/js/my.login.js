@@ -45,28 +45,27 @@ function login_login() {
                 id: $("#my-login-id").val(),
                 pw: login_encpw()
             },
-            success: login_success_login,
-            error: login_error_login
+            success: login_success_login
         });
     }
 }
 
 function login_success_login(jobj) {
     console.log("로그인 성공하였음");
-    my_header_header();
-    my_menu_menu();
-    my_submenu_chartsubmenu();
-    my_chart_chart();
-}
-
-function login_error_login(jobj) {
-    console.log(jobj.msg);
+    console.log(jobj.state);
+    if (jobj.state == RespState.success) {
+        my_header_header();
+        my_menu_menu();
+        my_submenu_chartsubmenu();
+        my_chart_chart();
+    } else if (jobj.state == RespState.message) {
+        $("#my-login-errormsg").text(jobj.msg);
+    }
 }
 
 
 function login_encpw() {
     var pw = $("#my-login-pw").val();
     var encpw = SHA256(pw);
-//    $("#my-login-pw").val(encpw);
     return encpw;
 }
