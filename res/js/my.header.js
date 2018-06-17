@@ -63,8 +63,11 @@ function my_header_success_register(jobj) {
 
 
 function my_header_userid() {
-    console.log("userid clicked");
+    $.ajax({
+
+    });
 }
+
 
 function my_header_logout() {
     $.ajax({

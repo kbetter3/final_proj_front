@@ -12,6 +12,7 @@ function my_submenu_success_submenu(jobj) {
 
 
 function my_submenu_getMusic() {
+    console.log($(this).attr("controller"));
     $.ajax({
         url: "getmusic",
         data: {
@@ -23,6 +24,5 @@ function my_submenu_getMusic() {
 }
 
 function my_submenu_success_getMusic(jobj) {
-    var music = jobj.music;
-    console.log(jobj);
+    console.log(jobj.music.length);
 }

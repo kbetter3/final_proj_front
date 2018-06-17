@@ -1,0 +1,18 @@
+<div class="my-sep h20"></div>
+            <div class="my-submenu-wrap">
+                <ul class="my-submenu-container">
+                    <li class="my-submenu-menuitem-4 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-mymusic-like" controller="like">좋아요</span></li>
+                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-mymusic-playlist" controller="playlist">플레이리스트</span></li>
+                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-mymusic-lastestlisten" controller="lastestlisten">최근 들은</span></li>
+                    <li class="my-submenu-menuitem-4"><span class="my-submenu-menulink" id="my-submenu-mymusic-frequetlylisten" controller="frequentlylisten">많이 들은</span></li>
+                </ul>
+            </div>
+
+            <script>
+            $(document).ready(function(){
+                $("#my-submenu-mymusic-like").on("click", my_submenu_getMusic);
+                $("#my-submenu-mymusic-playlist").on("click", my_submenu_getMusic);
+                $("#my-submenu-mymusic-lastestlisten").on("click", my_submenu_getMusic);
+                $("#my-submenu-mymusic-frequetlylisten").on("click", my_submenu_getMusic);
+            });
+            </script>

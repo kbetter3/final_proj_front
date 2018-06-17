@@ -29,6 +29,7 @@
         <script src="/res/js/my.header.js"></script>
         <script src="/res/js/my.state.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="/res/js/my.artistupload.js"></script>
         <script>
             $( function() {
                 $( "#my-upload-artist-debut" ).datepicker();
@@ -147,7 +148,7 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <input class="my-upload-input-radio" type="radio" id="my-upload-artist-type2" name="artist-type" value="그룹">
+                                <input class="my-upload-input-radio" type="radio" id="my-upload-artist-type2" name="artist-type" value="그룹" checked="checked">
                                 <label class="my-upload-label my-upload-label2" for="my-upload-artist-type2">그룹</label>
                                 <input class="my-upload-input-radio" type="radio" id="my-upload-artist-type1" name="artist-type" value="솔로">
                                 <label class="my-upload-label my-upload-label2" for="my-upload-artist-type1">솔로</label>
@@ -167,15 +168,11 @@
                 </form>
                 <button class="my-upload-submit-button">등록하기</button>
             </div>
-        </div>
-
-        <script>
+            <script>
             $(document).ready(function(){
-                my_header_header();
-                my_menu_menu();
-                my_submenu_chartsubmenu();
-                my_chart_chart();
+                $(".my-upload-input-radio").on("click", my_artistupload_radio);
             });
-        </script>
+            </script>
+        </div>
     </body>
 </html>

@@ -1,0 +1,12 @@
+<div class="my-sep h20"></div>
+            <div class="my-submenu-wrap">
+                <ul class="my-submenu-container">
+                    <li class="my-submenu-menuitem-1 my-submenu-selected"><span class="my-submenu-menulink my-submenu-selected" id="my-submenu-mgmtmenu-myinfomgmt" controller="myinfomgmt">내정보</span></li>
+                </ul>
+            </div>
+
+            <script>
+            $(document).ready(function(){
+                $("#my-submenu-mgmtmenu-myinfomgmt").on("click", );
+            });
+            </script>
