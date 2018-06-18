@@ -10,9 +10,6 @@
 
             <script>
             $(document).ready(function(){
-                $("#my-submenu-mgmtmenu-myinfomgmt").on("click", );
-                $("#my-submenu-mgmtmenu-artistmgmt").on("click", );
-                $("#my-submenu-mgmtmenu-albummgmt").on("click", );
-                $("#my-submenu-mgmtmenu-musicmgmt").on("click", );
+                $("#my-submenu-mgmtmenu-artistmgmt").on("click", my_mgmt_artistmgmt);
             });
             </script>
