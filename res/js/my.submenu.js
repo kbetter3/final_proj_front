@@ -31,3 +31,12 @@ function my_submenu_getMusic() {
 function my_submenu_success_getMusic(jobj) {
     console.log(jobj.music.length);
 }
+
+
+// 가수/그룹 서브메뉴 클릭시
+function my_submenu_artistmgmt() {
+    my_mgmt_artistmgmt();
+}
+
+
+// 관리자 서브메뉴

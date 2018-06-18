@@ -1,65 +1,65 @@
-.my-artistlist-contents-wrap {
+.my-artistmgmt-contents-wrap {
     width: 100%;
 }
 
-.my-artistlist-title-wrap {
+.my-artistmgmt-title-wrap {
     height: 50px;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-#my-artistlist-title-no, .my-artistlist-no {
+#my-artistmgmt-title-no, .my-artistmgmt-no {
     padding-right: 5px;
     text-align: center;
     width: 65px;
 }
 
-#my-artistlist-title-thumb {
+#my-artistmgmt-title-thumb {
     width: 60px;
 }
 
-#my-artistlist-title-artistinfo, .my-artistlist-artistinfo {
+#my-artistmgmt-title-artistinfo, .my-artistmgmt-artistinfo {
     padding-left: 12px;
 /*    width: 340px;*/
     width: 300px;
 }
 
-#my-artistlist-title-activitytype, .my-artistlist-activitytype {
+#my-artistmgmt-title-activitytype, .my-artistmgmt-activitytype {
     padding-left: 12px;
     width: 100px;
 }
 
-#my-artistlist-title-agency, .my-artistlist-agency {
+#my-artistmgmt-title-agency, .my-artistmgmt-agency {
     padding-left: 20px;
     width: 200px;
 }
 
-#my-artistlist-title-debutdate, .my-artistlist-debutdate {
+#my-artistmgmt-title-debutdate, .my-artistmgmt-debutdate {
     padding-left: 12px;
     width: 100px;
 }
 
-#my-artistlist-title-like {
+#my-artistmgmt-title-like {
     padding-left: 36px;
     width: 135px;
 }
 
-.my-artistlist-like {
+.my-artistmgmt-like {
     padding-left: 18px;
 }
 
-#my-artistlist-title-edit, #my-artistlist-title-delete, .my-artistlist-edit, .my-artistlist-delete {
+#my-artistmgmt-title-edit, #my-artistmgmt-title-delete, .my-artistmgmt-edit, .my-artistmgmt-delete {
     text-align: center;
     width: 50px;
 }
 
-.my-artistlist-editbtn, .my-artistlist-deletebtn {
+.my-artistmgmt-editbtn, .my-artistmgmt-deletebtn {
     transform: scale(1.2);
     border: none;
     background-color: inherit;
 }
 
-.my-artistlist-artist-row {
+.my-artistmgmt-artist-row {
     height: 85px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }

@@ -1,0 +1,80 @@
+<div class="my-upload-container">
+                <h2 class="my-upload-title">아티스트 등록</h2>
+                <form action="artistUpload" method="post" id="upload-form">
+                    <div class="my-upload-img-div">
+                        <div class="my-upload-img-wrap">
+                            <p class="my-upload-img-label">
+                                <label class="my-upload-label" for="my-upload-artist-img">300x300</label>
+                            </p>
+                            <img id="my-upload-artist-img">
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <p class="my-upload-label">아티스트 사진</p>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <a class="my-upload-fileupload-button"><label class="my-upload-label3" for="my-upload-artist-picture">이미지 업로드</label></a>
+                                <input class="my-upload-input2" type="file" id="my-upload-artist-picture" name="artist-picture" accept=".jpg, .jpeg, .png, .gif">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-upload-content-div">
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-artist-name">이름</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <input class="my-upload-input" type="text" id="my-upload-artist-name" name="artist-name" placeholder="아티스트(그룹) 이름">
+                            </div>
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-artist-member">멤버</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <input class="my-upload-input" type="text" id="my-upload-artist-member" name="artist-member" placeholder="아티스트(그룹) 멤버 - 이름1,이름2,...">
+                            </div>
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-artist-debut">데뷔일</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <input class="my-upload-input" type="text" id="my-upload-artist-debut" name="artist-debut" placeholder="MM/DD/YYYY">
+                            </div>
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <p class="my-upload-label">활동 형태</p>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <input class="my-upload-input-radio" type="radio" id="my-upload-artist-type2" name="artist-type" value="그룹" checked="checked">
+                                <label class="my-upload-label my-upload-label2" for="my-upload-artist-type2">그룹</label>
+                                <input class="my-upload-input-radio" type="radio" id="my-upload-artist-type1" name="artist-type" value="솔로">
+                                <label class="my-upload-label my-upload-label2" for="my-upload-artist-type1">솔로</label>
+                            </div>
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-left">
+                                <label class="my-upload-label" for="my-upload-artist-company">소속사</label>
+                            </div>
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h60"></div>
+                                <input class="my-upload-input" type="text" id="my-upload-artist-company" name="artist-company" placeholder="소속사 이름">
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <button class="my-upload-submit-button">등록하기</button>
+            </div>
+            <script>
+            $(document).ready(function(){
+                $(".my-upload-input-radio").on("click", my_artistupload_radio);
+            });
+            </script>
