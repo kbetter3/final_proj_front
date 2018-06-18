@@ -11,5 +11,6 @@
             <script>
             $(document).ready(function(){
                 $("#my-submenu-mgmtmenu-artistmgmt").on("click", my_mgmt_artistmgmt);
+                $("#my-submenu-mgmtmenu-albummgmt").on("click", my_mgmt_albummgmt);
             });
             </script>

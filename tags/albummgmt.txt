@@ -1,0 +1,53 @@
+<div id="my-albummgmt-addbtn">등록하기</div>
+            <table class="my-albummgmt-contents-wrap">
+                <thead class="my-albummgmt-title">
+                    <tr class="my-albummgmt-title-wrap">
+                        <th id="my-albummgmt-title-no">NO</th>
+                        <th id="my-albummgmt-title-thumb"></th>
+                        <th id="my-albummgmt-title-albuminfo">앨범 정보</th>
+                        <th id="my-albummgmt-title-genre">장르</th>
+                        <th id="my-albummgmt-title-agency">소속사</th>
+                        <th id="my-albummgmt-title-releasedate">발매일</th>
+
+                        <th id="my-albummgmt-title-like">좋아요</th>
+                        <th id="my-albummgmt-title-edit">수정</th>
+                        <th id="my-albummgmt-title-delete">삭제</th>
+
+                    </tr>
+                </thead>
+                <tbody class="my-albummgmt-contents">
+
+                </tbody>
+            </table>
+
+            <table style="display: none;">
+                <tr class="my-albummgmt-album-row">
+                    <td class="my-albummgmt-no">1</td>
+                    <td class="my-albummgmt-thumb"><img src="http://via.placeholder.com/60x60"></td>
+                    <td class="my-albummgmt-albuminfo">
+                        <div class="my-albummgmt-name">name</div>
+                        <div class="my-albummgmt-member">member</div>
+                    </td>
+                    <td class="my-albummgmt-genre">장르</td>
+                    <td class="my-albummgmt-agency">소속사</td>
+                    <td class="my-albummgmt-releasedate">2018-01-01</td>
+
+                    <td class="my-albummgmt-like">
+                        <span class="glyphicon glyphicon-heart-empty my-albummgmt-likebtn"></span>
+                        <span class="my-albummgmt-likecount">0</span>
+                    </td>
+
+                    <td class="my-albummgmt-edit">
+                        <button class="glyphicon glyphicon-edit my-albummgmt-editbtn"></button>
+                    </td>
+
+                    <td class="my-albummgmt-edit">
+                        <button class="glyphicon glyphicon-trash my-albummgmt-deletebtn"></button>
+                    </td>
+                </tr>
+            </table>
+            <script>
+                $(document).ready(function(){
+                    $("#my-albummgmt-addbtn").on("click", my_mgmt_albumupload);
+                });
+            </script>
