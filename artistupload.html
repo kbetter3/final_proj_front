@@ -95,10 +95,10 @@
             <!-- 여기에 작성하면 됨 -->
             <div class="my-upload-container">
                 <h2 class="my-upload-title">아티스트 등록</h2>
-                <form action="artistUpload" method="post" id="upload-form">
+                <form action="artistUpload" method="post" id="upload-form" enctype="multipart/form-data">
                     <div class="my-upload-img-div">
                         <div class="my-upload-img-wrap">
-                            <p class="my-upload-img-label">
+                            <p class="my-upload-img-label" id="my-artistupload-img">
                                 <label class="my-upload-label" for="my-upload-artist-img">300x300</label>
                             </p>
                             <img id="my-upload-artist-img">
@@ -170,6 +170,8 @@
             </div>
             <script>
             $(document).ready(function(){
+                $("#my-upload-artist-debut").datepicker();
+                $("#my-upload-artist-picture").on("change", my_artistupload_picture_select);
                 $(".my-upload-input-radio").on("click", my_artistupload_radio);
             });
             </script>
