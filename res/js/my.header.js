@@ -35,9 +35,13 @@ function my_header_voucher() {
 }
 
 function my_header_success_voucher(jobj) {
-    $("#my-menu-container").html("");
-    $("#my-submenu-container").html("");
-    $("#my-contents-cnotainer").html("").append(jobj.tags);
+    if (jobj.state == RespState.tags) {
+        $("#my-menu-container").html("");
+        $("#my-submenu-container").html("");
+        $("#my-contents-container").html("").append(jobj.tags);
+    } else {
+        console.log("로그인 전용 메뉴");
+    }
 }
 
 
