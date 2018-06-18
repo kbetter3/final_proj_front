@@ -7,7 +7,11 @@ function my_submenu_submenu(target) {
 }
 
 function my_submenu_success_submenu(jobj) {
-    $("#my-submenu-container").html("").append(jobj.tags);
+    if (jobj.state == RespState.tags) {
+        $("#my-submenu-container").html("").append(jobj.tags);
+    } else {
+        console.log("로그인 전용 메뉴");
+    }
 }
 
 

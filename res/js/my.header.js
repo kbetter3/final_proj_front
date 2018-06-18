@@ -96,4 +96,5 @@ function my_header_logout() {
 
 function my_header_success_logout(jobj) {
     my_header_header();
+    my_player_player();
 }
