@@ -7,7 +7,7 @@ function my_musicupload_load(){
     });
     $( function() {
         $( "#my-upload-music-launch" ).datepicker();
-        $( "#my-upload-music-music" ).on("change",my_musicupload_success_music_select)
+        $( "#my-upload-music-music" ).on("change", my_musicupload_success_music_select);
     } );
 }
 
