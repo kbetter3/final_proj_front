@@ -78,7 +78,7 @@ function my_albumupload_upload() {
         console.log(bname);
         console.log(bartist);
         console.log(blaunch);
-        console.log(bthumg);
+        console.log(bthumb);
     }
 }
 

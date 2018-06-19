@@ -35,17 +35,18 @@ function my_artistupload_upload() {
     var name = $("#my-upload-artist-name");
     var member = $("#my-upload-artist-member");
     var debutdate = $("#my-upload-artist-debut");
-    var activitytype = $(".my-upload-input-radio[checked=checked]");
+    var activitytype = $(".my-upload-input-radio:checked");
     var thumb = $("#my-upload-artist-picture");
 
     var bname = name.val().length > 0 ? true : false;
     var bmember = member.val().length > 0 ? true : false;
     var bdebutdate = debutdate.val().length > 0 ? true : false;
+    var bactivitytype = activitytype.length > 0 ? true : false;
     var bthumb = thumb[0].files[0] != undefined ? true : false;
 
 
 
-    if (bname && bmember && bdebutdate && bthumb) {
+    if (bname && bmember && bdebutdate && bactivitytype && bthumb) {
         var formData = new FormData($("form")[0]);
 
         $.ajax({
