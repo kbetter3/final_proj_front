@@ -36,7 +36,6 @@ function my_artistupload_upload() {
     var member = $("#my-upload-artist-member");
     var debutdate = $("#my-upload-artist-debut");
     var activitytype = $(".my-upload-input-radio[checked=checked]");
-    var agency = $("#my-upload-artist-company");
     var thumb = $("#my-upload-artist-picture");
 
     var bname = name.val().length > 0 ? true : false;
@@ -48,15 +47,6 @@ function my_artistupload_upload() {
 
 
     if (bname && bmember && bdebutdate && bagency && bthumb) {
-        console.log("등록하자");
-
-//        var formData = new FormData();
-//        formData.append("name", name.val());
-//        formData.append("member", member.val());
-//        formData.append("debutdate", debutdate.val());
-//        formData.append("activitytype", activitytype.val());
-//        formData.append("agency", agency.val());
-//        formData.append("img", thumb.val());
         var formData = new FormData($("form")[0]);
 
         $.ajax({
