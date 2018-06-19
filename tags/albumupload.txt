@@ -15,7 +15,7 @@
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
                                 <a class="my-upload-fileupload-button"><label class="my-upload-label3" for="my-upload-album-picture">이미지 업로드</label></a>
-                                <input class="my-upload-input2" type="file" id="my-upload-album-picture" name="album-picture" accept=".jpg, .jpeg, .png, .gif">
+                                <input class="my-upload-input2" type="file" id="my-upload-album-picture" name="albumpicture" accept=".jpg, .jpeg, .png, .gif">
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <input class="my-upload-input" type="text" id="my-upload-album-name" name="album-name" placeholder="앨범 이름">
+                                <input class="my-upload-input" type="text" id="my-upload-album-name" name="albumname" placeholder="앨범 이름">
                             </div>
                         </div>
                         <div class="my-upload-row">
@@ -35,12 +35,8 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <select id="my-upload-album-artist" name="album-artist" class="my-upload-input">
+                                <select id="my-upload-album-artist" name="albumartist" class="my-upload-input">
                                     <option value="" disabled selected>아티스트 선택</option>
-                                    <option value="1">Juice WRLD</option>
-                                    <option value="2">BTS</option>
-                                    <option value="3">Trippie Redd</option>
-                                    <option value="4">BABY</option>
                                 </select>
                             </div>
                         </div>
@@ -50,7 +46,7 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <input class="my-upload-input" type="text" id="my-upload-album-launch" name="album-launch" placeholder="MM/DD/YYYY">
+                                <input class="my-upload-input" type="text" id="my-upload-album-launch" name="albumlaunch" placeholder="MM/DD/YYYY">
                             </div>
                         </div>
                         <div class="my-upload-row">
@@ -59,7 +55,7 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <select id="my-upload-album-genre" name="album-genre" class="my-upload-input">
+                                <select id="my-upload-album-genre" name="albumgenre" class="my-upload-input">
                                     <option value="" disabled selected>장르 선택</option>
                                     <option value="1">Rock</option>
                                     <option value="2">Classic</option>
@@ -74,7 +70,7 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <input class="my-upload-input" type="text" id="my-upload-album-company" name="album-company" placeholder="소속사 이름">
+                                <input class="my-upload-input" type="text" id="my-upload-album-company" name="albumcompany" placeholder="소속사 이름">
                             </div>
                         </div>
                     </div>
@@ -83,6 +79,5 @@
                 <button class="my-upload-submit-button">등록하기</button>
             </div>
             <script>
-                $(document).ready(function(){
-                });
+                $(document).ready(my_albumupload_load);
             </script>
