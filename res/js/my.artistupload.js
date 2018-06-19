@@ -41,12 +41,11 @@ function my_artistupload_upload() {
     var bname = name.val().length > 0 ? true : false;
     var bmember = member.val().length > 0 ? true : false;
     var bdebutdate = debutdate.val().length > 0 ? true : false;
-    var bagency = agency.val().length > 0 ? true : false;
     var bthumb = thumb[0].files[0] != undefined ? true : false;
 
 
 
-    if (bname && bmember && bdebutdate && bagency && bthumb) {
+    if (bname && bmember && bdebutdate && bthumb) {
         var formData = new FormData($("form")[0]);
 
         $.ajax({
@@ -67,5 +66,7 @@ function my_artistupload_upload() {
 }
 
 function my_artistupload_success_artistupload(jobj) {
-    console.log("artistupload 성공했다 artistmgmt로 보내라");
+    if (jobj.state == RespState.success) {
+        console.log("artistupload 성공했다 artistmgmt로 보내라");
+    }
 }
