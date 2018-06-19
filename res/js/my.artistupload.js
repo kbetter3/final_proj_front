@@ -26,7 +26,7 @@ function my_artistupload_picture_select() {
             success: my_artistupload_success_picture_select
         });
     }else{
-        $("#my-upload-artist-img").attr("src","")
+        $("#my-upload-artist-img").removeAttr("src")
         $(e.currentTarget).val("")
         alert("이미지(jpg, jpeg, png, gif) 파일만 업로드 가능합니다.")
     }

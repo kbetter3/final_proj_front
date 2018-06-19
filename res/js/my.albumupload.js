@@ -51,7 +51,7 @@ function my_albumupload_picture_select(e) {
             success: my_albumupload_success_picture_select
         });
     }else{
-        $("#my-upload-album-img").attr("src","")
+        $("#my-upload-album-img").removeAttr("src")
         $(e.currentTarget).val("")
         alert("이미지(jpg, jpeg, png, gif) 파일만 업로드 가능합니다.")
     }
