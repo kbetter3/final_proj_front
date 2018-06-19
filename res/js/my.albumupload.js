@@ -9,7 +9,7 @@ function my_albumupload_load(){
 
 function my_albumupload_success_load(jobj){
     $("#my-upload-album-artist option:not([disabled])").remove()
-    $.each(jobj.artist,function(idx, artist){
+    $.each(jobj.artist[0],function(idx, artist){
         var template = '<option value="'+idx+'">'+artist+'</option>';
         $("#my-upload-album-artist").append(template);
     })
