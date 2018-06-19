@@ -4,9 +4,11 @@ function my_albumupload_load(){
         cache:false,
         type:"GET",
         success:my_albumupload_success_load
-    })
+    });
+
     $( function() {
         $( "#my-upload-album-launch" ).datepicker();
+        $(".my-upload-submit-button").on("click", my_albumupload_upload);
     } );
 }
 
