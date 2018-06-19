@@ -67,6 +67,6 @@ function my_artistupload_upload() {
 
 function my_artistupload_success_artistupload(jobj) {
     if (jobj.state == RespState.success) {
-        console.log("artistupload 성공했다 artistmgmt로 보내라");
+        my_mgmt_artistmgmt();
     }
 }
