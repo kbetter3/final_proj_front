@@ -9,6 +9,7 @@ function my_musicupload_load(){
         $( "#my-upload-music-launch" ).datepicker();
         $( "#my-upload-music-music" ).on("change", my_musicupload_success_music_select);
         $( "#my-upload-music-album" ).on("change", my_musicupload_change_img);
+        $(".my-upload-submit-button").on("click", my_musicupload_upload);
     } );
 }
 
@@ -27,7 +28,7 @@ function my_musicupload_success_load(jobj){
 }
 
 function my_musicupload_change_img(e){
-    $("#my-upload-album-img").sttr("src","albumthumb?fname="+$("#my-upload-music-album option:selected").attr("thumb"))
+    $("#my-upload-album-img").attr("src","albumthumb?fname="+$("#my-upload-music-album option:selected").attr("thumb"))
 }
 /*function my_musicupload_picture_select() {
 //    var formData = new FormData($("#upload-form")[0]);
