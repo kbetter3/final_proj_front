@@ -51,7 +51,7 @@ function my_artistupload_upload() {
     var bmember = member.val().length > 0 ? true : false;
     var bdebutdate = debutdate.val().length > 0 ? true : false;
     var bactivitytype = activitytype.length > 0 ? true : false;
-    var bthumb = thumb[0].files[0] != undefined ? true : false;
+    var bthumb = thumb.val() != "" ? true : false;
 
 
 

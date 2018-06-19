@@ -75,7 +75,7 @@ function my_albumupload_upload() {
     var bname = name.val().length > 0 ? true : false;
     var bartist = artist.val()!=null ? true : false;
     var blaunch = launch.val().length > 0 ? true : false;
-    var bthumb = thumb[0].files[0] != undefined ? true : false;
+    var bthumb = thumb.val() != "" ? true : false;
 
 
 

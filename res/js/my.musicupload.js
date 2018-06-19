@@ -66,7 +66,7 @@ function my_musicupload_upload() {
 
     var bname = name.val().length > 0 ? true : false;
     var blaunch = launch.val().length > 0 ? true : false;
-    var bmusic = music[0].files[0] != undefined ? true : false;
+    var bmusic = music.val() != "" ? true : false;
     var btype = type.length > 0 ? true : false;
 
 
