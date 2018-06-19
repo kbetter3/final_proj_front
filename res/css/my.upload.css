@@ -51,6 +51,7 @@ body{
 .my-upload-img-div img,.my-upload-music-div textarea{
     width:300px;
     height:300px;
+    position:relative;
     display:inline-block;
 }
 .my-upload-music-div textarea{
