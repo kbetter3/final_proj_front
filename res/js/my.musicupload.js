@@ -8,13 +8,14 @@ function my_musicupload_load(){
     $( function() {
         $( "#my-upload-music-launch" ).datepicker();
         $( "#my-upload-music-music" ).on("change", my_musicupload_success_music_select);
+        $( "#my-upload-music-album" ).on("change", my_musicupload_change_img);
     } );
 }
 
 function my_musicupload_success_load(jobj){
     $("#my-upload-music-album option:not([disabled])").remove()
     $.each(jobj.album,function(idx, album){
-        var template = '<option value="'+album.albumno+'">'+album.albumname+'</option>';
+        var template = '<option value="'+album.albumno+'" thumb="'+album.thumb+'">'+album.albumname+'</option>';
         $("#my-upload-music-album").append(template);
     });
 
@@ -25,6 +26,9 @@ function my_musicupload_success_load(jobj){
     });
 }
 
+function my_musicupload_change_img(e){
+    $("#my-upload-album-img").sttr("src","albumthumb?fname="+$("#my-upload-music-album option:selected").attr("thumb"))
+}
 /*function my_musicupload_picture_select() {
 //    var formData = new FormData($("#upload-form")[0]);
     var formData = new FormData();

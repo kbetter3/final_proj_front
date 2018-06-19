@@ -29,7 +29,7 @@
         <script src="/res/js/my.header.js"></script>
         <script src="/res/js/my.state.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+        <script src="/res/js/my.musicupload.js"></script>
     </head>
 
     <body>
@@ -90,19 +90,12 @@
             <div class="my-upload-container">
                 <h2 class="my-upload-title">곡 등록</h2>
                 <form action="musicUpload" method="post" id="upload-form">
-                    <div class="my-upload-music-div">
-                        <div class="my-upload-music-wrap">
-                            <textarea placeholder="가사 입력" id="my-upload-music-lyrics"></textarea>
-                        </div>
-                        <div class="my-upload-row">
-                            <div class="my-upload-row-left">
-                                <div class="align-helper h60"></div>
-                                <a class="my-upload-fileupload-button"><label class="my-upload-label3" for="my-upload-music-music">음원 업로드</label></a>
-                                <input class="my-upload-input2" type="file" id="my-upload-music-music" name="musicmusic" accept=".mp3">
-                            </div>
-                            <div class="my-upload-row-right">
-                                <p class="my-upload-label" id="my-upload-music-filename"></p>
-                            </div>
+                    <div class="my-upload-img-div">
+                        <div class="my-upload-img-wrap">
+                            <p class="my-upload-img-label">
+                                <label class="my-upload-label" for="my-upload-album-img">앨범 사진</label>
+                            </p>
+                            <img id="my-upload-album-img">
                         </div>
                     </div>
                     <div class="my-upload-content-div">
@@ -159,7 +152,21 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="my-upload-content-div2">
+                        <div class="my-upload-row">
+                            <div class="my-upload-label-wrap">
+                                <p class="my-upload-label" id="my-upload-music-filename"></p>
+                            </div>
+                            <a class="my-upload-fileupload-button"><label class="my-upload-label3" for="my-upload-music-music">음원 업로드</label></a>
+                            <input class="my-upload-input2" type="file" id="my-upload-music-music" name="musicmusic" accept=".mp3">
+                        </div>
+                        <div class="my-upload-row">
+                            <div class="my-upload-row-right">
+                                <div class="align-helper h250"></div>
+                                <textarea placeholder="가사 입력" id="my-upload-music-lyrics"></textarea>
+                            </div>
+                        </div>
+                    </div>
                 </form>
                 <button class="my-upload-submit-button">등록하기</button>
             </div>

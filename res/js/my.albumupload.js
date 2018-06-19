@@ -13,11 +13,6 @@ function my_albumupload_load(){
     } );
 }
 
-function my_albumupload_check(){
-
-
-}
-
 function my_albumupload_success_load(jobj){
     $("#my-upload-album-artist option:not([disabled])").remove()
     $.each(jobj.artist,function(idx, artist){
