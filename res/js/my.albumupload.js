@@ -5,8 +5,9 @@ function my_albumupload_load(){
         type:"GET",
         success:my_albumupload_success_load
     })
-
-    $( "#my-upload-album-launch" ).datepicker();
+    $( function() {
+        $( "#my-upload-album-launch" ).datepicker();
+    } );
 }
 
 function my_albumupload_success_load(jobj){
