@@ -4,10 +4,10 @@ function my_musicupload_load(){
         cache:false,
         type:"GET",
         success:my_musicupload_success_load
-    })
+    });
     $( function() {
         $( "#my-upload-music-launch" ).datepicker();
-        $( "#my-upload-music-music" ).on("change",my_musicupload_success_music_select)
+        $( "#my-upload-music-music" ).on("change", my_musicupload_success_music_select);
     } );
 }
 
@@ -16,13 +16,13 @@ function my_musicupload_success_load(jobj){
     $.each(jobj.album,function(idx, album){
         var template = '<option value="'+album.albumno+'">'+album.albumname+'</option>';
         $("#my-upload-music-album").append(template);
-    })
+    });
 
     $("#my-upload-music-genre option:not([disabled])").remove()
     $.each(jobj.genre,function(idx, genre){
         var template = '<option value="'+genre+'">'+genre+'</option>';
         $("#my-upload-music-genre").append(template);
-    })
+    });
 }
 
 /*function my_musicupload_picture_select() {
@@ -49,12 +49,12 @@ function my_musicupload_success_music_select(e) {
     if(filename.match(/(.mp3)$/)){
         console.log("my-upload-music-music에 파일 이름 걸기");
 
-        var _filename = filename.split('\\')
-        $("#my-upload-music-filename").text(_filename[_filename.length-1])
+        var _filename = filename.split('\\');
+        $("#my-upload-music-filename").text(_filename[_filename.length-1]);
     }else{
-        $("#my-upload-music-filename").text("")
-        $(e.currentTarget).val("")
-        alert("mp3 파일만 업로드 가능합니다.")
+        $("#my-upload-music-filename").text("");
+        $(e.currentTarget).val("");
+        alert("mp3 파일만 업로드 가능합니다.");
     }
 }
 

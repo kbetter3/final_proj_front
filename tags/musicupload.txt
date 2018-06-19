@@ -8,8 +8,8 @@
                         <div class="my-upload-row">
                             <div class="my-upload-row-left">
                                 <div class="align-helper h60"></div>
-                                <a class="my-upload-fileupload-button"><label class="my-upload-label3" for="my-upload-music-picture">음원 업로드</label></a>
-                                <input class="my-upload-input2" type="file" id="my-upload-music-picture" name="music-picture" accept=".mp3" onchange="javascript:document.getElementById('my-upload-music-filename').innerText=this.value.split('\\')[this.value.split('\\').length-1]">
+                                <a class="my-upload-fileupload-button"><label class="my-upload-label3" for="my-upload-music-music">음원 업로드</label></a>
+                                <input class="my-upload-input2" type="file" id="my-upload-music-music" name="musicmusic" accept=".mp3">
                             </div>
                             <div class="my-upload-row-right">
                                 <p class="my-upload-label" id="my-upload-music-filename"></p>
@@ -23,22 +23,7 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <input class="my-upload-input" type="text" id="my-upload-music-name" name="music-name" placeholder="앨범 이름">
-                            </div>
-                        </div>
-                        <div class="my-upload-row">
-                            <div class="my-upload-row-left">
-                                <label class="my-upload-label" for="my-upload-music-artist">아티스트</label>
-                            </div>
-                            <div class="my-upload-row-right">
-                                <div class="align-helper h60"></div>
-                                <select id="my-upload-music-artist" name="music-artist" class="my-upload-input">
-                                    <option value="" disabled selected>아티스트 선택</option>
-                                    <option value="1">Juice WRLD</option>
-                                    <option value="2">BTS</option>
-                                    <option value="3">Trippie Redd</option>
-                                    <option value="4">BABY</option>
-                                </select>
+                                <input class="my-upload-input" type="text" id="my-upload-music-name" name="musicname" placeholder="앨범 이름">
                             </div>
                         </div>
                         <div class="my-upload-row">
@@ -47,10 +32,8 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <select id="my-upload-music-album" name="music-album" class="my-upload-input">
+                                <select id="my-upload-music-album" name="musicalbum" class="my-upload-input">
                                     <option value="" disabled selected>앨범 선택</option>
-                                    <option value="1">Goodbye &amp; Good Riddance Goodbye &amp; Good Riddance</option>
-                                    <option value="2">JuiceWRLD 9 9 9</option>
                                 </select>
                             </div>
                         </div>
@@ -60,7 +43,7 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <input class="my-upload-input" type="text" id="my-upload-music-launch" name="music-launch" placeholder="MM/DD/YYYY">
+                                <input class="my-upload-input" type="text" id="my-upload-music-launch" name="musiclaunch" placeholder="MM/DD/YYYY">
                             </div>
                         </div>
                         <div class="my-upload-row">
@@ -69,12 +52,8 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <select id="my-upload-music-genre" name="music-genre" class="my-upload-input">
+                                <select id="my-upload-music-genre" name="musicgenre" class="my-upload-input">
                                     <option value="" disabled selected>장르 선택</option>
-                                    <option value="1">Rock</option>
-                                    <option value="2">Classic</option>
-                                    <option value="3">Electronic</option>
-                                    <option value="4">Hiphop</option>
                                 </select>
                             </div>
                         </div>
@@ -84,9 +63,9 @@
                             </div>
                             <div class="my-upload-row-right">
                                 <div class="align-helper h60"></div>
-                                <input class="my-upload-input-radio" type="radio" id="my-upload-music-type1" name="music-type" value="국내">
+                                <input class="my-upload-input-radio" type="radio" id="my-upload-music-type1" name="musictype" value="국내">
                                 <label class="my-upload-label my-upload-label2" for="my-upload-music-type1">국내</label>
-                                <input class="my-upload-input-radio" type="radio" id="my-upload-music-type2" name="music-type" value="해외">
+                                <input class="my-upload-input-radio" type="radio" id="my-upload-music-type2" name="musictype" value="해외">
                                 <label class="my-upload-label my-upload-label2" for="my-upload-music-type2">해외</label>
                             </div>
                         </div>
@@ -96,6 +75,5 @@
                 <button class="my-upload-submit-button">등록하기</button>
             </div>
             <script>
-                $(document).ready(function(){
-                });
+                $(document).ready(my_musicupload_load);
             </script>

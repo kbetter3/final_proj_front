@@ -8,6 +8,7 @@ function my_albumupload_load(){
 
     $( function() {
         $( "#my-upload-album-launch" ).datepicker();
+        $("#my-upload-album-picture").on("change", my_albumupload_picture_select);
         $(".my-upload-submit-button").on("click", my_albumupload_upload);
     } );
 }
@@ -70,7 +71,7 @@ function my_albumupload_upload() {
     var launch = $("#my-upload-album-launch");
     var genre = $("#my-upload-album-genre");
     var company = $("#my-upload-album-company");
-    var thumb = $("#my-upload-album-img");
+    var thumb = $("#my-upload-album-picture");
 
     var bname = name.val().length > 0 ? true : false;
     var bartist = artist.val()!=null ? true : false;
