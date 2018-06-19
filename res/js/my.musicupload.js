@@ -7,6 +7,7 @@ function my_musicupload_load(){
     })
     $( function() {
         $( "#my-upload-music-launch" ).datepicker();
+        $( "#my-upload-music-music" ).on("change",my_musicupload_success_music_select)
     } );
 }
 
@@ -40,10 +41,21 @@ function my_musicupload_success_load(jobj){
     });
 }*/
 
-function my_musicupload_success_music_select(filename) {
-    console.log("my-upload-music-music에 파일 이름 걸기");
-    var _filename = filename.split('\\')
-    $("#my-upload-music-filename").text(_filename[_filename.length-1])
+function my_musicupload_success_music_select(e) {
+    console.log("my-upload-music-music 파일 확장자 체크");
+
+    var filename = $(e.currentTarget).val();
+
+    if(filename.match(/(.mp3)$/)){
+        console.log("my-upload-music-music에 파일 이름 걸기");
+
+        var _filename = filename.split('\\')
+        $("#my-upload-music-filename").text(_filename[_filename.length-1])
+    }else{
+        $("#my-upload-music-filename").text("")
+        $(e.currentTarget).val("")
+        alert("mp3 파일만 업로드 가능합니다.")
+    }
 }
 
 function my_musicupload_upload() {

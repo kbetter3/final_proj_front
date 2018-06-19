@@ -9,18 +9,27 @@ function my_artistupload_radio() {
 
 function my_artistupload_picture_select() {
 //    var formData = new FormData($("#upload-form")[0]);
-    var formData = new FormData();
-    formData.append("pic", $(this)[0].files[0]);
+    var filename = $(e.currentTarget).val();
 
-    $.ajax({
-        url: "pictest",
-        data: formData,
-        cache: false,
-        contentType: false,
-        processData: false,
-        type: "POST",
-        success: my_artistupload_success_picture_select
-    });
+    if(filename.match(/(.jpg|.jpeg|.png|.gif)$/)){
+
+        var formData = new FormData();
+        formData.append("pic", $(this)[0].files[0]);
+
+        $.ajax({
+            url: "pictest",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            type: "POST",
+            success: my_artistupload_success_picture_select
+        });
+    }else{
+        $("#my-upload-artist-img").attr("src","")
+        $(e.currentTarget).val("")
+        alert("이미지(jpg, jpeg, png, gif) 파일만 업로드 가능합니다.")
+    }
 }
 
 function my_artistupload_success_picture_select(jobj) {

@@ -98,7 +98,7 @@
                             <div class="my-upload-row-left">
                                 <div class="align-helper h60"></div>
                                 <a class="my-upload-fileupload-button"><label class="my-upload-label3" for="my-upload-music-music">음원 업로드</label></a>
-                                <input class="my-upload-input2" type="file" id="my-upload-music-music" name="musicmusic" accept=".mp3" onchange="my_musicupload_success_music_select(this.val)">
+                                <input class="my-upload-input2" type="file" id="my-upload-music-music" name="musicmusic" accept=".mp3">
                             </div>
                             <div class="my-upload-row-right">
                                 <p class="my-upload-label" id="my-upload-music-filename"></p>
@@ -164,8 +164,7 @@
                 <button class="my-upload-submit-button">등록하기</button>
             </div>
             <script>
-                $(document).ready(function(){
-                });
+                $(document).ready(my_musicupload_load);
             </script>
         </div>
 
