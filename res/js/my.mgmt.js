@@ -27,10 +27,10 @@ function my_mgmt_success_artistcont(jobj) {
     var artist = jobj.artist;
 
     for (var i = 0; i < artist.length; i++) {
-        var artistrow = $("#my-artistmgmt-artist-row").clone();
+        var artistrow = $(".my-artistmgmt-artist-row").clone();
 
         artistrow.find(".my-artistmgmt-no").text(i + 1);
-        artistrow.find("img").attr("src", "artistpic?fname=" + artist[i].thumb);
+        artistrow.find("img").attr("src", "mgmt/artistpic?fname=" + artist[i].thumb);
         artistrow.find(".my-artistmgmt-name").text(artist[i].name);
         artistrow.find(".my-artistmgmt-member").text(artist[i].member);
         artistrow.find(".my-artistmgmt-activitytype").text(artist[i].activitytype);
@@ -81,7 +81,24 @@ function my_mgmt_albumcont() {
 }
 
 function my_mgmt_success_albumcont(jobj) {
-    console.log("로드되었음");
+    var album = jobj.album;
+
+    console.log("album : " + album.length);
+
+    for (var i = 0; i < album.length; i++) {
+        var albumrow = $(".my-albummgmt-album-row").clone();
+
+        albumrow.find(".my-albummgmt-no").text(i + 1);
+        albumrow.find("img").attr("src", "mgmt/albumpic?fname=" + album[i].thumb);
+        albumrow.find(".my-albummgmt-name").text(album[i].name);
+        albumrow.find(".my-albummgmt-member").text(album[i].member);
+        albumrow.find(".my-albummgmt-genre").text(album[i].genre);
+        albumrow.find(".my-albummgmt-agency").text(album[i].agency);
+        albumrow.find(".my-albummgmt-releasedate").text(album[i].releasedate);
+        albumrow.find(".my-albummgmt-likecount").text(album[i].likecount);
+
+        $(".my-albummgmt-contents").append(albumrow);
+    }
 }
 
 // 앨범 업로드페이지 불러오기
@@ -121,7 +138,27 @@ function my_mgmt_musiccont() {
 }
 
 function my_mgmt_success_musiccont(jobj) {
-    console.log("로드되었음")
+    var music = jobj.music;
+
+    for (var i = 0; i < music.length; i++) {
+        var musicrow = $(".my-musicmgmt-music-row").clone();
+
+        musicrow.find(".my-musicmgmt-no").text(i + 1);
+
+        musicrow.find(".my-musicmgmt-name").text(music[i].name);
+        musicrow.find(".my-musicmgmt-artist").text(music[i].artist);
+        $.ajax({
+            url: "mgmt/albumname",
+            data: {albumno: music[i].albumno},
+            success: function(jobj){
+                musicrow.find(".my-musicmgmt-album").text(jobj.albumname);
+                musicrow.find("img").attr("src", "mgmt/albumpic?fname=" + jobj.albumthumb);
+            }
+        });
+        musicrow.find(".my-musicmgmt-likecount").text(music[i].likecount);
+
+        $(".my-musicmgmt-contents").append(musicrow);
+    }
 }
 
 // 음원 업로드페이지 불러오기
