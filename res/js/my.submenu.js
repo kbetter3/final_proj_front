@@ -33,6 +33,12 @@ function my_submenu_success_getMusic(jobj) {
 }
 
 
+// chartsubmenu item 선택시
+function my_submenu_changeSubmenu(target, pg) {
+    my_chart_chart($(this).attr("controller"), 1);
+}
+
+
 // 가수/그룹 서브메뉴 클릭시
 function my_submenu_artistmgmt() {
     my_mgmt_artistmgmt();

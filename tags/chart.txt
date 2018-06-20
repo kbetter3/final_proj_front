@@ -13,10 +13,10 @@
                     </tr>
                 </thead>
                 <tbody class="my-chart-contents" id="my-chart-music-container">
-                    
+
                 </tbody>
             </table>
-            
+
 <!--            음원 템플릿-->
             <table style="display: none">
             <tr class="my-chart-music-row" id="my-chart-music-row-template" style="display: none;">
@@ -37,10 +37,7 @@
                         <td class="my-chart-down"><button class="glyphicon glyphicon-download-alt my-chart-downbtn"></button></td>
                     </tr>
             </table>
-
-
-        <script>
-            $(document).ready(function(){
-                my_chart_test();
-            });
-        </script>
+            <script>
+                $(document).ready(function(){
+                });
+            </script>
