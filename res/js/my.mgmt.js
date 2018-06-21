@@ -148,7 +148,7 @@ function my_mgmt_success_musiccont(jobj) {
         musicrow.find(".my-musicmgmt-name").text(music[i].name);
         musicrow.find(".my-musicmgmt-artist").text(music[i].artist);
         $.ajax({
-            url: "mgmt/albumname",
+            url: "albumname",
             data: {albumno: music[i].albumno},
             success: function(jobj){
                 musicrow.find(".my-musicmgmt-album").text(jobj.albumname);

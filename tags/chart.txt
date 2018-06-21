@@ -19,7 +19,7 @@
 
 <!--            음원 템플릿-->
             <table style="display: none">
-            <tr class="my-chart-music-row" id="my-chart-music-row-template" style="display: none;">
+            <tr class="my-chart-music-row" id="my-chart-music-row-template">
                         <td class="my-chart-cb"><input id="my-chart-cb" type="checkbox"></td>
                         <td class="my-chart-no">1</td>
                         <td class="my-chart-thumb"><img class="my-chart-img" src="http://via.placeholder.com/60x60"></td>
