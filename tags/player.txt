@@ -1,14 +1,14 @@
-<div class="my-player-wrap">
-            <div class="my-player-outer-container">
-                <div class="my-player-container">
-                    <div class="my-player-controls">
+<div class="my-player-wrap jp-audio" id="jp_container_1" role="application">
+            <div class="my-player-outer-container jp-type-single">
+                <div class="my-player-container jp-interface jp-gui">
+                    <div class="my-player-controls jp-controls">
                         <ul>
                             <li class="my-player-icon-keys my-player-back">
                                 <button class="glyphicon glyphicon-step-backward"></button>
                             </li>
                             <li class="my-player-icon-keys my-player-play">
                                 <!--  glyphicon-play / glyphicon-pause -->
-                                <button class="glyphicon glyphicon-play"></button>
+                                <button class="glyphicon glyphicon-play jp-play"></button>
                             </li>
                             <li class="my-player-icon-keys my-player-front">
                                 <button class="glyphicon glyphicon-step-forward"></button>
@@ -24,17 +24,17 @@
                         </ul>
                     </div>
                     <div class="my-player-timeline">
-                        <div class="my-player-timeline-inner">
-                            <div class="my-player-timeline-timer my-player-timeline-nowplaying my-player-timer"><p>0:01</p></div>
-                            <div class="my-player-progress-wrap">
-                                <div class="my-player-progress-outline my-player-timeline-progress-outline">
+                        <div class="my-player-timeline-inner jp-time-holder">
+                            <div class="my-player-timeline-timer my-player-timeline-nowplaying my-player-timer jp-current-time"><p>0:01</p></div>
+                            <div class="my-player-progress-wrap jp-progress">
+                                <div class="my-player-progress-outline my-player-timeline-progress-outline jp-seek-bar">
                                     <!-- style="width:30%" -->
-                                    <div class="my-player-progress-bar my-player-timeline-progress-bar" style="width:0"></div>
+                                    <div class="my-player-progress-bar my-player-timeline-progress-bar jp-play-bar" style="width:0"></div>
                                     <!-- style="left:30%" -->
                                     <button class="my-player-progress-button" style="left:0"></button>
                                 </div>
                             </div>
-                            <div class="my-player-timeline-timer my-player-timeline-nowplaying"><p>4:48</p></div>
+                            <div class="my-player-timeline-timer my-player-timeline-nowplaying jp-duration"><p>4:48</p></div>
                             <div class="my-player-timeline-volume-control">
                                 <div class="my-player-icon-keys my-player-volume">
                                     <!-- glyphicon-volume-up(default), glyphicon-volume-down, glyphicon-volume-off -->
@@ -217,28 +217,11 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>
+        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
         <script>
-            $(document).ready(function(){
-                $("#jquery_jplayer_1").jPlayer({
-		          ready: function (event) {
-			     $(this).jPlayer("setMedia", {
-				title: "Bubble",
-				mp3: "music",
-			});
-		},
-		swfPath: "/res/jplayer/js",
-		supplied: "mp3",
-		wmode: "window",
-		useStateClassSkin: true,
-		autoBlur: false,
-		smoothPlayBar: true,
-		keyEnabled: true,
-		remainingDuration: true,
-		toggleDuration: true
-	});
-            });
+            $(document).ready(my_player_load);
         </script>

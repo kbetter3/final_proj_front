@@ -263,8 +263,7 @@ function register_doRegister() {
 }
 
 function my_register_success_doRegister(jobj) {
-    console.log("회원가입 성공했음");
-    console.log(jobj.rslt);
+    my_header_home();
 }
 
 function register_clipTerm() {

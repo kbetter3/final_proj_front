@@ -64,6 +64,7 @@ function my_chart_success_getMusic(jobj) {
         musicrow.find(".my-chart-album").text(music[i].albumname);
         musicrow.find("img").attr("src", "albumpic?fname=" + music[i].thumb);
         musicrow.find(".my-chart-likecount").text(music[i].likecount);
+        musicrow.find(".my-chart-listenbtn").attr("musicno", music[i].no).on("click", my_player_playmusic);
 
         $(".my-chart-contents").append(musicrow);
     }
