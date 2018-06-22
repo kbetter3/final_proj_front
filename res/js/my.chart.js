@@ -66,6 +66,15 @@ function my_chart_success_getMusic(jobj) {
         musicrow.find(".my-chart-likecount").text(music[i].likecount);
         musicrow.find(".my-chart-listenbtn").attr("musicno", music[i].no).on("click", my_player_playmusic);
 
+        musicrow.find(".my-chart-downbtn").attr("mno", music[i].no).on("click", my_chart_musicdown);
+
         $(".my-chart-contents").append(musicrow);
+    }
+}
+
+function my_chart_musicdown() {
+    if ($("#my-header-useridbtn") != null && $("#my-header-useridbtn") != undefined) {
+        $(location).attr("href", "member/musicdown?musicno=" + $(this).attr("mno"));
+        my_header_header();
     }
 }

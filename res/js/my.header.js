@@ -21,13 +21,16 @@ function my_header_header() {
 function my_header_success_header(jobj) {
     var member = jobj.member;
 
-    console.log(member);
+//    console.log(member);
 
     $("#my-header-right-container").html("").append(jobj.tags);
     if (member != null) {
         $("#my-header-useridbtn").text(member.uid);
         $("#my-header-voucher").text(member.expiredate);
         $("#my-header-downcnt").text(member.downcount);
+    } else {
+        $("#my-header-voucher").text("-/-");
+        $("#my-header-downcnt").text("-/-");
     }
 }
 
