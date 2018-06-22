@@ -22,8 +22,8 @@
                     <span class="my-myinfo-info" id="my-myinfo-voucher">voucher</span>
                 </div>
                 <div>
-                    <label class="my-myinfo-label" for="my-myinfo-voucher">다운로드 이용권</label>
-                    <span class="my-myinfo-info" id="my-myinfo-voucher">30</span>
+                    <label class="my-myinfo-label" for="my-myinfo-downcount">다운로드 이용권</label>
+                    <span class="my-myinfo-info" id="my-myinfo-downcount">30</span>
                 </div>
             </div>
             <script>
