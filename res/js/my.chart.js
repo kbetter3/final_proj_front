@@ -73,8 +73,14 @@ function my_chart_success_getMusic(jobj) {
 }
 
 function my_chart_musicdown() {
-    if ($("#my-header-useridbtn") != null && $("#my-header-useridbtn") != undefined) {
-        $(location).attr("href", "member/musicdown?musicno=" + $(this).attr("mno"));
-        my_header_header();
-    }
+    $.ajax({
+        type: "post",
+        url: "loginchck",
+        data: {musicno: $(this).attr("mno")},
+        success: function(jobj){
+            if (jobj.state == RespState.success) {
+                $(location).attr("href", "member/musicdown?musicno=" + jobj.musicno);
+            }
+        }
+    });
 }
