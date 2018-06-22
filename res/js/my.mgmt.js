@@ -30,7 +30,7 @@ function my_mgmt_success_artistcont(jobj) {
         var artistrow = $(".my-artistmgmt-artist-row").clone();
 
         artistrow.find(".my-artistmgmt-no").text(i + 1);
-        artistrow.find("img").attr("src", "mgmt/artistpic?fname=" + artist[i].thumb);
+        artistrow.find("img").css("width", "60px").css("height", "60px").attr("src", "mgmt/artistpic?fname=" + artist[i].thumb);
         artistrow.find(".my-artistmgmt-name").text(artist[i].name);
         artistrow.find(".my-artistmgmt-member").text(artist[i].member);
         artistrow.find(".my-artistmgmt-activitytype").text(artist[i].activitytype);
@@ -89,7 +89,7 @@ function my_mgmt_success_albumcont(jobj) {
         var albumrow = $(".my-albummgmt-album-row").clone();
 
         albumrow.find(".my-albummgmt-no").text(i + 1);
-        albumrow.find("img").attr("src", "mgmt/albumpic?fname=" + album[i].thumb);
+        albumrow.find("img").css("width", "60px").css("height", "60px").attr("src", "mgmt/albumpic?fname=" + album[i].thumb);
         albumrow.find(".my-albummgmt-name").text(album[i].name);
         albumrow.find(".my-albummgmt-member").text(album[i].member);
         albumrow.find(".my-albummgmt-genre").text(album[i].genre);
@@ -152,7 +152,7 @@ function my_mgmt_success_musiccont(jobj) {
             data: {albumno: music[i].albumno},
             success: function(jobj){
                 musicrow.find(".my-musicmgmt-album").text(jobj.albumname);
-                musicrow.find("img").attr("src", "mgmt/albumpic?fname=" + jobj.albumthumb);
+                musicrow.find("img").css("width", "60px").css("height", "60px").attr("src", "mgmt/albumpic?fname=" + jobj.albumthumb);
             }
         });
         musicrow.find(".my-musicmgmt-likecount").text(music[i].likecount);
