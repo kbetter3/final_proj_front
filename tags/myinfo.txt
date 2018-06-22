@@ -1,0 +1,31 @@
+<div class="my-myinfo-container">
+                <p class="my-myinfo-title">내정보</p>
+                <div>
+                    <label class="my-myinfo-label" for="my-myinfo-id">아이디</label>
+                    <span class="my-myinfo-info" id="my-myinfo-id">id</span>
+                </div>
+                <div>
+                    <label class="my-myinfo-label" for="my-myinfo-email">이메일</label>
+                    <span class="my-myinfo-info" id="my-myinfo-email">email</span>
+                </div>
+                <div>
+                    <label class="my-myinfo-label" for="my-myinfo-power">등급</label>
+                    <span class="my-myinfo-info" id="my-myinfo-power">power</span>
+                    <span id="my-myinfo-uploader">업로더 권한 얻기</span>
+                </div>
+                <div>
+                    <label class="my-myinfo-label" for="my-myinfo-regdate">가입일</label>
+                    <span class="my-myinfo-info" id="my-myinfo-regdate">regdate</span>
+                </div>
+                <div>
+                    <label class="my-myinfo-label" for="my-myinfo-voucher">스트리밍 이용권</label>
+                    <span class="my-myinfo-info" id="my-myinfo-voucher">voucher</span>
+                </div>
+                <div>
+                    <label class="my-myinfo-label" for="my-myinfo-voucher">다운로드 이용권</label>
+                    <span class="my-myinfo-info" id="my-myinfo-voucher">30</span>
+                </div>
+            </div>
+            <script>
+                $(document).ready(my_myinfo_load);
+            </script>
