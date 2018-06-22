@@ -11,7 +11,7 @@ function my_mgmt_success_artistmgmt(jobj) {
         $("#my-contents-container").html("").append(jobj.tags);
         my_mgmt_artistcont();
     } else {
-        console.log("권한이 없습니다.");
+        // console.log("권한이 없습니다.");
     }
 }
 
@@ -69,7 +69,7 @@ function my_mgmt_success_albummgmt(jobj) {
         $("#my-contents-container").html("").append(jobj.tags);
         my_mgmt_albumcont();
     } else {
-        console.log("권한이 없습니다.");
+        //console.log("권한이 없습니다.");
     }
 }
 // 앨범 컨텐츠 블러오기
@@ -83,7 +83,7 @@ function my_mgmt_albumcont() {
 function my_mgmt_success_albumcont(jobj) {
     var album = jobj.album;
 
-    console.log("album : " + album.length);
+    //console.log("album : " + album.length);
 
     for (var i = 0; i < album.length; i++) {
         var albumrow = $(".my-albummgmt-album-row").clone();

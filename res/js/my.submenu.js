@@ -22,7 +22,7 @@ function my_submenu_success_submenu(jobj) {
     if (jobj.state == RespState.tags) {
         $("#my-submenu-container").html("").append(jobj.tags);
     } else {
-        console.log("로그인 전용 메뉴");
+        //console.log("로그인 전용 메뉴");
     }
 
 

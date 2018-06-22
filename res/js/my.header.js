@@ -12,7 +12,6 @@ function my_header_success_home(json) {
 
 
 function my_header_header() {
-    console.log("헤더 ajax");
     $.ajax({
         url: "header",
         success: my_header_success_header
@@ -21,6 +20,9 @@ function my_header_header() {
 
 function my_header_success_header(jobj) {
     var member = jobj.member;
+
+    console.log(member);
+
     $("#my-header-right-container").html("").append(jobj.tags);
     if (member != null) {
         $("#my-header-useridbtn").text(member.uid);
@@ -44,7 +46,7 @@ function my_header_success_voucher(jobj) {
         $("#my-submenu-container").html("");
         $("#my-contents-container").html("").append(jobj.tags);
     } else {
-        console.log("로그인 전용 메뉴");
+        alert("로그인 전용 메뉴 입니다");
     }
 }
 
@@ -81,7 +83,6 @@ function my_header_success_register(jobj) {
 
 
 function my_header_userid() {
-    console.log("클릭했냐?");
     $.ajax({
         url: "myinfo",
         success: my_header_success_userid
