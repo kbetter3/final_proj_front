@@ -16,7 +16,18 @@ function my_myinfo_success_loaddata(jobj) {
 
         $("#my-myinfo-id").text(member.id);
         $("#my-myinfo-email").text(member.email);
-        $("#my-myinfo-power").text(member.power);
+
+        switch (member.power) {
+            case 1:
+                $("#my-myinfo-power").text("일반회원");
+                break;
+            case 2:
+                $("#my-myinfo-power").text("업로더");
+                break;
+            default:
+                break;
+        }
+
 
         if (member.power == 1) {
             $("#my-myinfo-uploader").show();
