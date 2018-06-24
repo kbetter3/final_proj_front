@@ -35,6 +35,6 @@ function my_myinfo_getpower() {
     $.ajax({
         type: "post",
         url: "member/getpower",
-        success: my_myinfo_loaddata
+        success: my_header_userid
     });
 }

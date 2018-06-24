@@ -84,6 +84,7 @@ function my_chart_musicdown() {
         success: function(jobj){
             if (jobj.state == RespState.success) {
                 $(location).attr("href", "member/musicdown?musicno=" + jobj.musicno);
+                my_header_header();
             }
         }
     });

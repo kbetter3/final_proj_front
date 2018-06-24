@@ -2,7 +2,7 @@ function my_submenu_submenu(target) {
     $.ajax({
         url: "submenu",
         data: {fname: target},
-        async: true,
+        async: false,
         success: my_submenu_success_submenu
     });
 
