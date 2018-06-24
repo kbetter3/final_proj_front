@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>title</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="my.common.css">
+        <link rel="stylesheet" href="my.header.css">
+        <link rel="stylesheet" href="/res/css/my.auth.css">
+        <link rel="stylesheet" href="/res/css/my.register.css">
+
+        <script src="/res/js/my.encrypt.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+    </head>
+
+    <body>
+        <div class="my-register-wrap">
+            <div class="my-auth-logo">
+                <h1><a href="#">Logo</a></h1>
+            </div>
+            <div class="my-auth-container">
+                <h2 class="my-auth-title">회원가입이 완료되었습니다.</h2>
+                <a class="my-auth-link" href="/final_proj">홈페이지 바로가기</a>
+            </div>
+        </div>
+
+        <script src="/res/js/my.register.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".my-register-iddupchck").on("click", register_idCheck);
+                $(".my-register-iddupchck").on("keydown", register_resetIdValidation);
+                $("input[type=password]").on("keyup", register_pwCheck);
+                $(".my-register-emaildupchck").on("click", register_emailCheck);
+                $(".my-register-term-checkbox").on("click", register_termCheck);
+                $("#my-register-term-all").on("click", register_termAllCheck);
+                $(".my-register-regbtn").on("click", register_doRegister);
+                $(".my-register-term-clip").on("click", register_clipTerm);
+            });
+        </script>
+    </body>
+</html>
