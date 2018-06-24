@@ -52,6 +52,7 @@ function my_chart_getMusic(target, page) {
 
 function my_chart_success_getMusic(jobj) {
     var music = jobj.music;
+    var uid = jobj.uid;
 
     $(".my-chart-contents").html("");
 
@@ -63,6 +64,9 @@ function my_chart_success_getMusic(jobj) {
         musicrow.find(".my-chart-artist").text(music[i].artist);
         musicrow.find(".my-chart-album").text(music[i].albumname);
         musicrow.find("img").css("width", "60px").css("height", "60px").attr("src", "albumpic?fname=" + music[i].thumb);
+
+        $(".my-chart-likebtn").on("click", function(){alert("서비스 준비중입니다.")});
+
         musicrow.find(".my-chart-likecount").text(music[i].likecount);
         musicrow.find(".my-chart-listenbtn").attr("musicno", music[i].no).on("click", my_player_playmusic);
 
