@@ -19,6 +19,9 @@ body {
     margin: 0 auto;
     background-color: white;
 }
+#my-contents-container{
+    margin-bottom: 100px;
+}
 
 .my-sep {
     background-color: white;
