@@ -44,14 +44,15 @@
                             <li class="my-player-icon-keys my-player-front">
                                 <button class="glyphicon glyphicon-step-forward"></button>
                             </li>
+                            <li class="my-player-icon-keys my-player-repeat">
+                                <!-- glyphicon-repeat(default) / glyphicon-repeat my-player-on / glyphicon-refresh my-player-on -->
+                                <button class="glyphicon glyphicon-stop jp-stop"></button>
+                            </li>
                             <li class="my-player-icon-keys my-player-shuffle">
                                 <!-- ''(default) / glyphicon-random my-player-shuffle -->
                                 <button class="glyphicon glyphicon-random"></button>
                             </li>
-                            <li class="my-player-icon-keys my-player-repeat">
-                                <!-- glyphicon-repeat(default) / glyphicon-repeat my-player-on / glyphicon-refresh my-player-on -->
-                                <button class="glyphicon glyphicon-repeat"></button>
-                            </li>
+
                         </ul>
                     </div>
                     <div class="my-player-timeline">
@@ -71,12 +72,12 @@
                                     <!-- glyphicon-volume-up(default), glyphicon-volume-down, glyphicon-volume-off -->
                                     <button class="glyphicon glyphicon-volume-down"></button>
                                 </div>
-                                <div class="my-player-progress-wrap">
-                                    <div class="my-player-progress-outline my-player-volume-outline">
+                                <div class="my-player-progress-wrap jp-volume-controls">
+                                    <div class="my-player-progress-outline my-player-volume-outline jp-volume-bar">
                                         <!-- style="width:30%" -->
-                                        <div class="my-player-progress-bar my-player-volume-bar" style="width:30%"></div>
+                                        <div class="my-player-progress-bar my-player-volume-bar jp-volume-bar-value"></div>
                                         <!-- style="left:30%" -->
-                                        <button class="my-player-progress-button" style="left:30%"></button>
+                                        <button class="my-player-progress-button" style="left:30%; display: none;"></button>
                                     </div>
                                 </div>
                             </div>

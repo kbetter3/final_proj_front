@@ -7,6 +7,8 @@ function my_chart_test() {
 
 function my_chart_add_music(no, jobj) {
     var mRow = $("#my-chart-music-row-template").clone();
+    mRow.removeAttr("id");
+
     mRow.find("#my-chart-cb").attr("value", jobj.no);
     mRow.find(".my-chart-no").text(no);
 //    이미지 이름
@@ -57,7 +59,9 @@ function my_chart_success_getMusic(jobj) {
     $(".my-chart-contents").html("");
 
     for (var i = 0; i < music.length; i++) {
-        var musicrow = $(".my-chart-music-row").clone();
+//        var musicrow = $(".my-chart-music-row").clone();
+        var musicrow = $("#my-chart-music-row-template").clone();
+        musicrow.removeAttr("id");
 
         musicrow.find(".my-chart-no").text(i + 1);
         musicrow.find(".my-chart-name").text(music[i].name);
