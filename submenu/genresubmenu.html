@@ -20,7 +20,8 @@
         <script src="https://code.jquery.com/jquery-latest.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-
+        <script src="../res/js/my.chart.js"></script>
+        <script src="../res/js/my.submenu.js"></script>
         <script>
             $(document).ready(function(){
 
@@ -52,6 +53,7 @@
                 $("#my-submenu-genre-indie").on("click", my_submenu_changeSubmenu);
                 $("#my-submenu-genre-rock").on("click", my_submenu_changeSubmenu);
                 $("#my-submenu-genre-teuroteu").on("click", my_submenu_changeSubmenu);
+                $(".my-submenu-container .my-submenu-menulink").on("click", my_submenu_change_menu_color);
             });
         </script>
         </div>

@@ -22,6 +22,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
         <script src="/res/js/my.artistupload.js"></script>
         <script src="/res/js/my.mgmt.js"></script>
+        <script src="../res/js/my.chart.js"></script>
+        <script src="../res/js/my.submenu.js"></script>
 
     </head>
 
@@ -43,6 +45,7 @@
                 $("#my-submenu-mgmtmenu-artistmgmt").on("click", my_mgmt_artistmgmt);
                 $("#my-submenu-mgmtmenu-albummgmt").on("click", my_mgmt_albummgmt);
                 $("#my-submenu-mgmtmenu-musicmgmt").on("click", my_mgmt_musicmgmt);
+                $(".my-submenu-container .my-submenu-menulink").on("click", my_submenu_change_menu_color);
             });
             </script>
         </div>
