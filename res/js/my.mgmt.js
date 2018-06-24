@@ -171,6 +171,7 @@ function my_mgmt_success_musiccont(jobj) {
             }
         });
         musicrow.find(".my-musicmgmt-likecount").text(music[i].likecount);
+        musicrow.find(".my-musicmgmt-listenbtn").attr("musicno", music[i].no).on("click", my_player_playmusic);
 
         $(".my-musicmgmt-contents").append(musicrow);
     }
