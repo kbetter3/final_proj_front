@@ -67,3 +67,8 @@
     color: red;
     margin-bottom: 20px;
 }
+.my-login-errormsg{
+    color:red;
+    margin:20px 0;
+    text-align:center;
+}
