@@ -161,12 +161,11 @@ function my_mgmt_success_musiccont(jobj) {
 
         musicrow.find(".my-musicmgmt-name").text(music[i].name);
         musicrow.find(".my-musicmgmt-artist").text(music[i].artist);
-        console.log(musicrow);
         $.ajax({
             url: "albumname",
             data: {albumno: music[i].albumno},
+            async: false,
             success: function(jobj2){
-                console.log(musicrow);
                 musicrow.find(".my-musicmgmt-album").text(jobj2.albumname);
                 musicrow.find("img").css("width", "60px").css("height", "60px").attr("src", "mgmt/albumpic?fname=" + jobj2.albumthumb);
             }
