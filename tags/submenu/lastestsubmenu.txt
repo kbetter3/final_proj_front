@@ -10,5 +10,6 @@
             $(document).ready(function(){
                 $("#my-submenu-lastest-dom").on("click", my_submenu_changeSubmenu);
                 $("#my-submenu-lastest-int").on("click", my_submenu_changeSubmenu);
+                $(".my-submenu-container .my-submenu-menulink").on("click", my_submenu_change_menu_color);
             });
             </script>

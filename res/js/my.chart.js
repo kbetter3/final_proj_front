@@ -26,7 +26,7 @@ function my_chart_chart(target, page) {
     $.ajax({
         type: "POST",
         url: "chart",
-        async: true,
+        async: false,
         success: my_chart_success_chart
     });
 

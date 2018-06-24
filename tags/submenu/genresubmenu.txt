@@ -20,5 +20,6 @@
                 $("#my-submenu-genre-indie").on("click", my_submenu_changeSubmenu);
                 $("#my-submenu-genre-rock").on("click", my_submenu_changeSubmenu);
                 $("#my-submenu-genre-teuroteu").on("click", my_submenu_changeSubmenu);
+                $(".my-submenu-container .my-submenu-menulink").on("click", my_submenu_change_menu_color);
             });
         </script>
